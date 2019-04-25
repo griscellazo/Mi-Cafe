@@ -106,6 +106,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@color/colorPrimary"
                 android:text="@string/button_sign_in"
+                android:onClick="registrarClick"
                 android:textColor="@color/white" />
 
         </LinearLayout>
