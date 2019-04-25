@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
+    android:padding="10dp"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    android:background="@drawable/fondopantallas">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:background="@color/Rosado"
+        android:text="NOMBRE:"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorAccent" />
+
+    <TextView
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:background="@color/Rosado"
+        android:text="CONTRASEÑA:"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/etContraseña"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorAccent"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:layout_width="92dp"
+        android:layout_height="32dp"
+        android:background="@color/Rosado"
+        android:text="CORREO:"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/etCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/bLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Registrate"
+        android:textColor="@color/white" />
+
+</LinearLayout>

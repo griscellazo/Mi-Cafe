@@ -1,14 +1,17 @@
 package bo.Androides.MiCafe;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
     private Context mContext;
@@ -19,18 +22,19 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText usuario;
 
     private TextView txtContraseña;
-    private EditText contraseña;
+    private EditText contrasena;
 
     private TextView txtEmail;
     private EditText email;
 
     private LinearLayout botones;
     private Button enviar;
+    private Button limpiar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        /*super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
         mContext = this;
@@ -60,9 +64,9 @@ public class RegisterActivity extends AppCompatActivity {
         txtContraseña.setText("Ingrese su contraseña");
         padre.addView(txtContraseña);
 
-        contraseña = new EditText(mContext);
-        contraseña.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        padre.addView(contraseña);
+        contrasena = new EditText(mContext);
+        contrasena.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        padre.addView(contrasena);
 
         //Email
         txtEmail = new TextView(mContext);
@@ -73,21 +77,17 @@ public class RegisterActivity extends AppCompatActivity {
         email = new EditText(mContext);
         email.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
         padre.addView(email);
+        */
+        Toast.makeText(RegisterActivity.this,"EL CLICK FUNCIONA", Toast.LENGTH_SHORT).show();
 
-        //Panel de botones
-        botones = new LinearLayout(mContext);
-        botones.setOrientation(LinearLayout.HORIZONTAL);
-
-
-        enviar = new Button(mContext);
-        enviar.setText(getString(R.string.enviar));
-        enviar.setLayoutParams(new LinearLayout.LayoutParams(
-                0, //Width
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                1)); //Height
-        botones.addView(enviar);
 
 
 
     }
+
+
+
+
+
+
 }
