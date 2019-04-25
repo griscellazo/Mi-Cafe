@@ -25,6 +25,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void registrarClick(View view) {
         Toast.makeText(MainActivity.this,"EL CLICK FUNCIONA", Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(mContext, RegisterActivity.class);
     }
 }

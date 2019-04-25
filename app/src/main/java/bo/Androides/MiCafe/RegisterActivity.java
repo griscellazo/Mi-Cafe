@@ -47,7 +47,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         //Usuario
         txtUsuario = new TextView(mContext);
-        txtUsuario.setText(getString(R.string.usuario));
+        txtUsuario.setText("Ingrese su usuario");
         txtUsuario.setTextSize(26);
         padre.addView(txtUsuario);
 
@@ -57,12 +57,37 @@ public class RegisterActivity extends AppCompatActivity {
         //contraseña
         txtContraseña = new TextView(mContext);
         txtContraseña.setTextSize(26);
-        txtContraseña.setText(getString(R.string.contraseña));
+        txtContraseña.setText("Ingrese su contraseña");
         padre.addView(txtContraseña);
 
         contraseña = new EditText(mContext);
         contraseña.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         padre.addView(contraseña);
+
+        //Email
+        txtEmail = new TextView(mContext);
+        txtEmail.setTextSize(26);
+        txtEmail.setText("Ingrese su email");
+        padre.addView(txtEmail);
+
+        email = new EditText(mContext);
+        email.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+        padre.addView(email);
+
+        //Panel de botones
+        botones = new LinearLayout(mContext);
+        botones.setOrientation(LinearLayout.HORIZONTAL);
+
+
+        enviar = new Button(mContext);
+        enviar.setText(getString(R.string.enviar));
+        enviar.setLayoutParams(new LinearLayout.LayoutParams(
+                0, //Width
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                1)); //Height
+        botones.addView(enviar);
+
+
 
     }
 }
