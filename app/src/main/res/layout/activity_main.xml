@@ -7,11 +7,11 @@
 
     <ImageView
         android:id="@+id/Logo_Cafe"
-        android:layout_width="145dp"
-        android:layout_height="151dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:contentDescription="TODO"
         android:src="@drawable/logo_cafe" />
 
@@ -27,7 +27,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="0dp"
             android:background="@color/Naranja"
             android:orientation="vertical">
 
@@ -35,7 +35,7 @@
                 android:id="@+id/Usuario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="0dp"
                 android:text="@string/title_username"
                 android:textColor="@color/white"
                 android:textSize="18sp" />

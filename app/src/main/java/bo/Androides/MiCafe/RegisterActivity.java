@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
+    private static final String LOG = RegisterActivity.class.getName();
     private Context mContext;
 
     private LinearLayout padre;
@@ -21,8 +23,8 @@ public class RegisterActivity extends AppCompatActivity {
     private TextView txtUsuario;
     private EditText usuario;
 
-    private TextView txtContraseña;
-    private EditText contrasena;
+    private TextView txtPassword;
+    private EditText password;
 
     private TextView txtEmail;
     private EditText email;
@@ -34,8 +36,18 @@ public class RegisterActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        /*super.onCreate(savedInstanceState);
+        /*
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        // Get the Intent that started this activity and extract the string
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        // Capture the layout's TextView and set the string as its text
+        TextView textView = findViewById(R.id.textView);
+        textView.setText(message);
+        */
+        super.onCreate(savedInstanceState);
+        Log.w(LOG, "onCreate");
 
         mContext = this;
 
@@ -58,15 +70,15 @@ public class RegisterActivity extends AppCompatActivity {
         usuario = new EditText(mContext);
         padre.addView(usuario);
 
-        //contraseña
-        txtContraseña = new TextView(mContext);
-        txtContraseña.setTextSize(26);
-        txtContraseña.setText("Ingrese su contraseña");
-        padre.addView(txtContraseña);
+        //Password
+        txtPassword = new TextView(mContext);
+        txtPassword.setTextSize(26);
+        txtPassword.setText("Ingrese su password");
+        padre.addView(txtPassword);
 
-        contrasena = new EditText(mContext);
-        contrasena.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        padre.addView(contrasena);
+        password = new EditText(mContext);
+        password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        padre.addView(password);
 
         //Email
         txtEmail = new TextView(mContext);
@@ -77,10 +89,16 @@ public class RegisterActivity extends AppCompatActivity {
         email = new EditText(mContext);
         email.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
         padre.addView(email);
-        */
-        Toast.makeText(RegisterActivity.this,"EL CLICK FUNCIONA", Toast.LENGTH_SHORT).show();
 
+        enviar = new Button(mContext);
+        enviar.setText("Enviar Datos");
+        enviar.setLayoutParams(new LinearLayout.LayoutParams(
+                0, //Width
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                1)); //Height
+        botones.addView(enviar);
 
+        setContentView(padre);
 
 
     }
