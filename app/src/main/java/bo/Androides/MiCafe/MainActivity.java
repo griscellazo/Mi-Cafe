@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void registrarClick(View view) {
         //Toast.makeText(MainActivity.this,"EL CLICK FUNCIONA", Toast.LENGTH_SHORT).show();
+        //COMENTARIO
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }
