@@ -1,46 +1,262 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/fondopantallas">
 
     <RelativeLayout
-        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp"
-        android:orientation="horizontal">
+        android:layout_height="53dp">
 
         <ImageView
-            android:id="@+id/atras"
-            android:layout_width="44dp"
-            android:layout_height="match_parent"
+            android:id="@+id/backbar"
+            android:layout_width="59dp"
+            android:layout_height="53dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp"
             android:src="@drawable/atras" />
 
         <TextView
-            android:id="@+id/ReservasPedidos"
-
-            android:layout_width="453dp"
+            android:id="@+id/Bebidas"
+            android:layout_width="352dp"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="-86dp"
             android:layout_marginLeft="-86dp"
-            android:layout_marginEnd="-85dp"
-            android:layout_marginRight="-85dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
             android:layout_marginBottom="0dp"
-            android:background="@color/colorAccent"
+            android:background="#14F445"
             android:gravity="center"
-            android:text="@string/title"
-            android:textColor="@color/white"
-            android:textColorLink="@color/white"
-            tools:text="@string/title" />
+            android:text="BEBIDAS" />
+
     </RelativeLayout>
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@color/Naranja"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="113dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/frutal_500ml" />
+
+        <TextView
+            android:id="@+id/frutal"
+            android:layout_width="81dp"
+            android:layout_height="match_parent"
+            android:background="#9C27B0"
+            android:gravity="center"
+            android:text="FRUTAL"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/tamaño"
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"></Spinner>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@color/Naranja"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="113dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/coca_500ml"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="81dp"
+            android:layout_height="match_parent"
+            android:background="#9C27B0"
+            android:gravity="center"
+            android:text="COCA COLA"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/tamaño1"
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+        </Spinner>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@color/Naranja"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="113dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/agua"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="81dp"
+            android:layout_height="match_parent"
+            android:background="#9C27B0"
+            android:gravity="center"
+            android:text="AGUA"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/tamaño2"
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+        </Spinner>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@color/Naranja"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="113dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/fanta_500ml"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="81dp"
+            android:layout_height="match_parent"
+            android:background="#9C27B0"
+            android:gravity="center"
+            android:text="FANTA"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/tamaño3"
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+        </Spinner>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@color/Naranja"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="113dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/jugo_de_uva"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:background="#9C27B0"
+            android:gravity="center"
+            android:text="JUGO DE UVA"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="5 Bs."
+            android:gravity="center"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@color/Naranja"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="113dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/jugo_de_pina"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:background="#9C27B0"
+            android:gravity="center"
+            android:text="JUGO DE PIÑA"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="5 Bs."
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@color/Naranja"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="113dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/jugo_de_sandia"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:background="#9C27B0"
+            android:gravity="center"
+            android:text="JUGO DE SANDIA"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="5 Bs."
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@color/Naranja"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="113dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/jugo_de_manzana"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:background="#9C27B0"
+            android:gravity="center"
+            android:text="JUGO DE MANZANA"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="5 Bs."
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
