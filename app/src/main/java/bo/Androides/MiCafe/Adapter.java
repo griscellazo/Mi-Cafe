@@ -39,11 +39,6 @@ public class Adapter extends BaseAdapter {
         EntidadesLista Item = (EntidadesLista) getItem(position);
 
         convertView = LayoutInflater.from(context).inflate(R.layout.item, null);
-        ImageView imgFoto = convertView.findViewById(R.id.imgFoto);
-        TextView tvTitulo = (TextView) convertView.findViewById(R.id.tvTitulo);
-
-        imgFoto.setImageResource(Item.getImgFoto());
-        tvTitulo.setText(Item.getTitulo());
 
         return convertView;
     }
