@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name = "opciones">
+        <item>Personal 2bs.</item>
+        <item>Medina 5bs.</item>
+        <item>Grande 2bs.</item>
+
+    </string-array>
+</resources>
