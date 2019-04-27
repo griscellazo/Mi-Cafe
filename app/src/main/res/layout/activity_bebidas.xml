@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondopantallas">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/atras"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/atras" />
+
+        <TextView
+            android:id="@+id/ReservasPedidos"
+
+            android:layout_width="453dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-86dp"
+            android:layout_marginLeft="-86dp"
+            android:layout_marginEnd="-85dp"
+            android:layout_marginRight="-85dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="@string/title"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
+            tools:text="@string/title" />
+    </RelativeLayout>
+
+</RelativeLayout>
