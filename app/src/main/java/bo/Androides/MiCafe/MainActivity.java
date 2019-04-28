@@ -7,6 +7,7 @@ import android.view.View;
 import android.content.Context;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,14 +22,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        opciones=(Spinner)findViewById(R.id.tamaño);
+        //opciones=(Spinner)findViewById(R.id.tamaño);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.opciones, android.R.layout.simple_spinner_item);
-        opciones.setAdapter(adapter);
+       // ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.opciones, android.R.layout.simple_spinner_item);
+       // opciones.setAdapter(adapter);
     }
 
     public void registrarClick(View view) {
-        //Toast.makeText(MainActivity.this,"EL CLICK FUNCIONA", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this,"EL CLICK FUNCIONA", Toast.LENGTH_SHORT).show();
         //COMENTARIO
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);

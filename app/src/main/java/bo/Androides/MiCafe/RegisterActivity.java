@@ -32,7 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.etContraseña);
         registerButton = findViewById(R.id.btnRegistrarse);
 
-    //prueba commit
+
     }
 
     public void registrar() {
