@@ -30,7 +30,7 @@
             android:layout_marginEnd="1dp"
             android:layout_marginRight="1dp"
             android:layout_marginBottom="0dp"
-            android:background="#14F445"
+            android:background="#FFEB3B"
             android:gravity="center"
             android:text="BEBIDAS" />
 
