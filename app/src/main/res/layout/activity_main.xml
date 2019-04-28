@@ -97,6 +97,7 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="20dp"
                 android:background="@color/colorPrimary"
+
                 android:onClick="registrarClick"
                 android:text="@string/button_sign_in"
                 android:textColor="@color/white" />
