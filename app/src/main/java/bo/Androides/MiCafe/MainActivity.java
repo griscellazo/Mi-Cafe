@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity  {
 
     private String message;
     private Context mContext;
-    private Spinner opciones;
+    //
 
     private EditText mUsuarioEditText;
     private EditText mPasswordEditText;
@@ -37,8 +37,6 @@ public class MainActivity extends AppCompatActivity  {
                 R.array.opciones,android.R.layout.simple_spinner_item);
 
         opciones.setAdapter(adapter);
-
-
 
 
         opciones=(Spinner)findViewById(R.id.tamano1);
