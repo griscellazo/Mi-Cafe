@@ -2,8 +2,8 @@
 <resources>
     <string-array name = "opciones">
         <item>Personal 2bs.</item>
-        <item>Medina 5bs.</item>
-        <item>Grande 2bs.</item>
+        <item>Mediana 5bs.</item>
+        <item>Grande 10bs.</item>
 
     </string-array>
 </resources>
