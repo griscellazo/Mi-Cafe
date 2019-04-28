@@ -19,8 +19,9 @@
             android:layout_width="44dp"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp"
-            android:src="@drawable/atras" />
+            android:layout_marginTop="0dp" />
+            //android:src="@drawable/"
+
 
         <TextView
             android:layout_width="match_parent"
@@ -32,11 +33,11 @@
 
     </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-
-    </android.support.v7.widget.RecyclerView>
+        android:layout_height="wrap_content"
+        android:divider="@color/RojoIntenso"
+        android:dividerHeight="1dp"></ListView>
 
 </LinearLayout>
