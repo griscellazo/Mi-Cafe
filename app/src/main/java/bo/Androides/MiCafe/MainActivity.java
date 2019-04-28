@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.opciones, android.R.layout.simple_spinner_item);
         opciones.setAdapter(adapter);
+        //COMENTARIO
     }
 
     public void registrarClick(View view) {
