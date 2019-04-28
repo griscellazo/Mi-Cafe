@@ -59,12 +59,10 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/tamano"
+            android:id="@+id/tamaño"
             android:layout_width="215dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp">
-        </Spinner>
-
+            android:layout_marginTop="40dp"></Spinner>
 
     </LinearLayout>
     <LinearLayout
@@ -88,7 +86,7 @@
             android:textSize="18sp"
             android:textStyle="bold" />
         <Spinner
-            android:id="@+id/tamano1"
+            android:id="@+id/tamaño1"
             android:layout_width="215dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp">
@@ -116,7 +114,7 @@
             android:textSize="18sp"
             android:textStyle="bold" />
         <Spinner
-            android:id="@+id/tamano2"
+            android:id="@+id/tamaño2"
             android:layout_width="215dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp">
@@ -144,7 +142,7 @@
             android:textStyle="bold" />
         
         <Spinner
-            android:id="@+id/tamano3"
+            android:id="@+id/tamaño3"
             android:layout_width="215dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp">
@@ -263,3 +261,4 @@
 
     </LinearLayout>
 </LinearLayout>
+
