@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".testActivity"></activity>
-        <activity android:name=".bebidas" />
+        <activity android:name=".ElementoLista"></activity>
+        <activity android:name=".DetallesBebidas" />
+        <activity android:name=".VisorImagen" />
+        <activity android:name=".Bebidas" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

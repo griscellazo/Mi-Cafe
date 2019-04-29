@@ -8,4 +8,7 @@
     <color name="Limon">#CDDC39</color>
     <color name="Naranja">#F46B0F</color>
     <color name="transparentWhite">#40FFFFFF</color>
+    <color name="Negro">#212121</color>
+    <color name="RojoIntenso">#b71c1c</color>
+    <color name="amarillopato">#FFC107</color>
 </resources>
