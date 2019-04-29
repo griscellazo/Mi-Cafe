@@ -128,7 +128,10 @@ public class RegisterActivity extends AppCompatActivity {
         intent.putExtra(Constants.KEY_REGISTRAR_USUARIO, json);
         setResult(RESULT_OK, intent); //OK: funciono, intent --> retornando el valor
         finish(); //Cierra el activity
-        //COMENTARIO
+
+
+        Intent intent2 = new Intent(this, Bebidas.class);
+        startActivity(intent2);
 
 
 

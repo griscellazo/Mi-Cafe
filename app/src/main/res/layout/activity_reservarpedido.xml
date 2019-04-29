@@ -26,7 +26,7 @@
             android:gravity="center"
             android:text="@string/title"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            tools:text="PEDIDO" />
+            tools:text="RESERVAR PEDIDO" />
     </LinearLayout>
 
     <RelativeLayout
@@ -48,37 +48,65 @@
 
             <TextView
                 android:id="@+id/textViewHorarioDe"
+                android:layout_width="270dp"
+                android:layout_height="100dp"
+                android:background="#75FCD5"
+                android:gravity="center"
+                android:text="@string/title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                tools:text="Entrega Del Pedido." />
+
+            <TextView
+                android:id="@+id/textViewHora"
+                android:layout_width="67dp"
+                android:layout_height="33dp"
+                android:background="#F502CB"
+                android:gravity="center"
+                android:text="@string/title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                tools:text="Hora:" />
+
+            <TextView
+                android:id="@+id/textViewMinutos"
+                android:layout_width="67dp"
+                android:layout_height="32dp"
+                android:background="#F502CB"
+                android:text="@string/title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                tools:text="Minutos:" />
+
+            <TextView
+                android:id="@+id/textViewDescripcionDeTuPedido"
                 android:layout_width="match_parent"
-                android:layout_height="293dp" />
+                android:layout_height="291dp"
+                android:background="#FFEB3B"
+                android:text="@string/title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                tools:text="Descripcion de tu pedido:" />
 
             <TextView
                 android:id="@+id/textViewPlanDePagos"
                 android:layout_width="match_parent"
-                android:layout_height="183dp"
+                android:layout_height="44dp"
+                android:layout_alignStart="@+id/null"
+                android:background="#75FCD5"
                 android:gravity="center"
                 android:text="@string/title"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                tools:text="¿Deseas Añadir Algo Mas A Tu Pedido?" />
-
-            <Button
-                android:id="@+id/buttonCurso"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="registrarClick"
-                android:text="Reservar Pedido" />
+                tools:text="Opciones de pago" />
 
             <Button
                 android:id="@+id/buttonEfectivo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="eliminarDatos"
-                android:text="Mandar Pedido" />
+                android:text="Efectivo" />
 
             <Button
                 android:id="@+id/buttonTarjeta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cancelar Pedido" />
+                android:text="Tarjeta" />
 
 
         </LinearLayout>

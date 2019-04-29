@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name = "opciones">
+        <item>Tamaño</item>
         <item>Personal 2bs.</item>
         <item>Mediana 5bs.</item>
         <item>Grande 10bs.</item>
