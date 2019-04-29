@@ -10,4 +10,5 @@
     <color name="transparentWhite">#40FFFFFF</color>
     <color name="Negro">#212121</color>
     <color name="RojoIntenso">#b71c1c</color>
+    <color name="amarillopato">#FFC107</color>
 </resources>

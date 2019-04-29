@@ -15,19 +15,22 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:background="@color/colorPrimary"
             android:id="@+id/Atras"
             android:layout_width="44dp"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:layout_marginTop="0dp" />
-            //android:src="@drawable/"
+        //android:src="@drawable/"
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
             android:text="  Elija que quiere servirse"
-            android:textColor="@color/RojoIntenso"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:textSize="25dp" />
 
 
@@ -38,6 +41,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:divider="@color/RojoIntenso"
-        android:dividerHeight="1dp"></ListView>
+        android:dividerHeight="1dp">
+
+    </ListView>
+
+
 
 </LinearLayout>
