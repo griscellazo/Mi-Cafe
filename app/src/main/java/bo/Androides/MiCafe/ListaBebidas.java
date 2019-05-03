@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 
-public class Bebidas extends AppCompatActivity {
+public class ListaBebidas extends AppCompatActivity {
 
     ListView lista;
 
