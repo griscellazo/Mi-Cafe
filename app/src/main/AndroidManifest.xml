@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Bebidas"></activity>
+
         <activity android:name=".ElementoLista" />
         <activity android:name=".DetallesBebidas" />
         <activity android:name=".VisorImagen" />
