@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity  {
 
         if (validarUsuario(usuario, password)) {
             Intent intent = new Intent(mContext, ListaActivity.class);
-            intent.putExtra(Constants.KEY_USUARIO, usuario);
-            intent.putExtra(Constants.KEY_PASSWORD, password);
+            intent.putExtra(Constants1.KEY_USUARIO, usuario);
+            intent.putExtra(Constants1.KEY_PASSWORD, password);
             startActivity(intent);
         } else {
             Toast.makeText(mContext, "Usuario o password invalido", Toast.LENGTH_SHORT)
