@@ -130,7 +130,7 @@ public class RegisterActivity extends AppCompatActivity {
         finish(); //Cierra el activity
 
 
-        Intent intent2 = new Intent(this, SnackYDulces.class);
+        Intent intent2 = new Intent(this, MenuPrincipal.class);
         startActivity(intent2);
 
 

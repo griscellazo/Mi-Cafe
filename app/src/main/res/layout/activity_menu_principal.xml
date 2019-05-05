@@ -6,4 +6,63 @@
     android:layout_height="match_parent"
     tools:context="bo.Androides.MiCafe.MenuPrincipal">
 
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondopantallas">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewMenúPrincipal"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:background="#FFEB3B"
+                    android:gravity="center"
+                    android:text="MENÚ PRINCIPAL" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="229dp"
+                    android:layout_height="97dp" />
+
+                <Button
+                    android:id="@+id/buttonBebidas"
+                    android:layout_width="match_parent"
+                    android:layout_height="71dp"
+                    android:onClick="bebidasClick"
+                    android:text="BEBIDAS" />
+
+                <Button
+                    android:id="@+id/buttonPlatosALaCarta"
+                    android:layout_width="match_parent"
+                    android:layout_height="79dp"
+                    android:onClick="platosALaCartaClick"
+                    android:text="PLATOS A LA CARTA"
+                    />
+                <Button
+                    android:id="@+id/buttonSnackYDulces"
+                    android:layout_width="match_parent"
+                    android:layout_height="79dp"
+                    android:onClick="snackYDulcesClick"
+                    android:text="SNACK Y DULCES "
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>
