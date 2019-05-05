@@ -10,79 +10,101 @@ import android.view.View;
 import android.content.Context;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import bo.Androides.MiCafe.db.DatabaseHelper;
+
 public class MainActivity extends AppCompatActivity  {
+    private static final String LOG = MainActivity.class.getName();
 
     private String message;
     private Context mContext;
-    //
+
 
     private EditText mUsuarioEditText;
     private EditText mPasswordEditText;
+
+    private Button mIniciarSesionButton;
 
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.w(LOG, "onCreate");
+
         setContentView(R.layout.activity_main);
+        mContext = this;
 
-        /*
-        opciones = (Spinner) findViewById(R.id.tamano);
+        initViews();
+    }
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.opciones,android.R.layout.simple_spinner_item);
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.w(LOG, "onStart");
+    }
 
-        opciones.setAdapter(adapter);
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.w(LOG, "onPause");
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.w(LOG, "onResume");
+    }
 
-        opciones=(Spinner)findViewById(R.id.tamano1);
-        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.opciones, android.R.layout.simple_spinner_item);
-        opciones.setAdapter(adapter1);
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.w(LOG, "onStop");
+    }
 
-        opciones=(Spinner)findViewById(R.id.tamano2);
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.opciones, android.R.layout.simple_spinner_item);
-        opciones.setAdapter(adapter2);
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.w(LOG, "onDestroy");
+    }
 
-        opciones=(Spinner)findViewById(R.id.tamano3);
-        ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.opciones, android.R.layout.simple_spinner_item);
-        opciones.setAdapter(adapter3);
-        */
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.w(LOG, "onRestart");
+    }
 
+    private void initViews() {
+        mUsuarioEditText = findViewById(R.id.usuarioEditText);
+        mPasswordEditText = findViewById(R.id.contrasenaEditText);
+        mIniciarSesionButton = findViewById(R.id.Iniciar_sesion);
     }
 
     public void registrarClick(View view) {
-        //Toast.makeText(MainActivity.this,"EL CLICK FUNCIONA", Toast.LENGTH_SHORT).show();
-        //COMENTARIO
+
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }
 
-    /*
-    @Override
-    public void onClick(View view) {
+    public void iniciarSesionClick (View view){
         String usuario = mUsuarioEditText.getText().toString();
         String password = mPasswordEditText.getText().toString();
         Log.e("Mis datos", usuario + " " + password);
 
         if (validarUsuario(usuario, password)) {
-            Intent intent = new Intent(mContext, ListaActivity.class);
-            intent.putExtra(Constants.KEY_USUARIO, usuario);
-            intent.putExtra(Constants.KEY_PASSWORD, password);
-            startActivity(intent);
+            Intent intent2 = new Intent(mContext, MenuPrincipal.class);
+            intent2.putExtra(Constants.KEY_USUARIO, usuario);
+            intent2.putExtra(Constants.KEY_PASSWORD, password);
+            startActivity(intent2);
         } else {
             Toast.makeText(mContext, "Usuario o password invalido", Toast.LENGTH_SHORT)
                     .show();
         }
-      */
-
-
-
-
-
+    }
 
     private boolean validarUsuario(String usuario, String password){
         if (usuario == null || usuario.isEmpty()){
@@ -91,12 +113,8 @@ public class MainActivity extends AppCompatActivity  {
         if (password == null || usuario.isEmpty()){
             return false;
         }
-
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
-        String usuarioGuardado = prefs.getString(Constants.PREF_USUARIO, "");
-        String passwordsGuardado = prefs.getString(Constants.KEY_PASSWORD, "");
-
-        return usuario.equals(usuarioGuardado) && password.equals(passwordsGuardado);
+        DatabaseHelper dbHelper = new DatabaseHelper(this.mContext);
+        return dbHelper.login(usuario, password);
     }
 
     public void eliminarDatos(View view) {

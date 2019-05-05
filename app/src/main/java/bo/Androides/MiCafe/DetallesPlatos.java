@@ -2,8 +2,11 @@ package bo.Androides.MiCafe;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
-public class detallePlatos extends AppCompatActivity {
+import android.widget.Toast;
+
+public class DetallesPlatos extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,4 +20,10 @@ public class detallePlatos extends AppCompatActivity {
             detalles.setText(b.getString("DET"));
         }
     }
+
+    public void verPedido (View view){
+        Intent intentPlatos = new Intent(this,VerPedido.class);
+        startActivity(intentPlatos);
+    }
+
 }

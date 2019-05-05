@@ -9,13 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VisorImagenSnackYDulces"></activity>
+        <activity android:name=".ElementoListaVerPedido"></activity>
+        <activity android:name=".VerPedido" />
+        <activity android:name=".VisorImagenSnackYDulces" />
         <activity android:name=".ElementoListaSnackYDulces" />
         <activity android:name=".DetalleSnackYDulces" />
         <activity android:name=".SnackYDulces" />
         <activity android:name=".VisorImagenPlatos" />
         <activity android:name=".ElementoListaPlatos" />
-        <activity android:name=".detallePlatos" />
+        <activity android:name=".DetallesPlatos" />
         <activity android:name=".PlatosALaCarta" />
         <activity android:name=".MenuPrincipal" />
         <activity android:name=".Bebidas" />

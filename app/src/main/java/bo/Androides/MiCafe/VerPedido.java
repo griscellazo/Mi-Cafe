@@ -9,10 +9,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 
-public class Bebidas extends AppCompatActivity {
+public class VerPedido extends AppCompatActivity {
 
     ListView lista;
-
+/*
     String[][] datos = {
             {"Frutal", "Es un jugo delicioso y refrescante de frutas naturales."},
             {"Coca Cola", "Es una sabrosa gaseosa para compartir en familia."},
@@ -26,16 +26,16 @@ public class Bebidas extends AppCompatActivity {
     };
 
     int [] datosImg = {R.drawable.frutal_500ml, R.drawable.coca_500ml, R.drawable.agua, R.drawable.fanta_500ml,R.drawable.jugo_de_uva,R.drawable.jugo_de_pina,R.drawable.jugo_de_sandia,R.drawable.jugo_de_manzana};
-
+*/
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bebidas);
+        setContentView(R.layout.activity_ver_pedido);
 
-
+        /*
         lista = (ListView) findViewById(R.id.Lista1);
 
         lista.setAdapter(new AdaptadorBebidas(this,datos,datosImg));
@@ -49,5 +49,6 @@ public class Bebidas extends AppCompatActivity {
                 startActivity(visorDetalles);
             }
         });
+        */
     }
 }

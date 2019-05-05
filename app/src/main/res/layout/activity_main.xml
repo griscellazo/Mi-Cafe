@@ -41,6 +41,7 @@
                 android:textSize="18sp" />
 
             <EditText
+                android:id="@+id/usuarioEditText"
                 android:layout_width="match_parent"
                 android:layout_height="41dp"
                 android:layout_marginStart="10dp"
@@ -70,6 +71,7 @@
                 android:textSize="18sp" />
 
             <EditText
+                android:id="@+id/contrasenaEditText"
                 android:layout_width="match_parent"
                 android:layout_height="41dp"
                 android:layout_marginStart="10dp"
@@ -111,6 +113,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:background="@color/colorPrimary"
+            android:onClick="iniciarSesionClick"
             android:text="@string/button_login"
             android:textColor="@color/white" />
 

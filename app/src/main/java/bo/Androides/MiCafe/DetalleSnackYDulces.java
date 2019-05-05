@@ -3,7 +3,9 @@ package bo.Androides.MiCafe;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DetalleSnackYDulces extends AppCompatActivity {
 
@@ -20,4 +22,13 @@ public class DetalleSnackYDulces extends AppCompatActivity {
             detalles.setText(b.getString("DET"));
         }
     }
+
+    public void verPedido (View view){
+        Intent intentverPedido = new Intent(this, VerPedido.class);
+        startActivity(intentverPedido);
+    }
+
+
+
+
 }

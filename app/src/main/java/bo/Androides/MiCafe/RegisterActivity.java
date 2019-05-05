@@ -21,6 +21,7 @@ import com.google.gson.annotations.Expose;
 
 import com.google.gson.Gson;
 
+import bo.Androides.MiCafe.db.DatabaseHelper;
 import bo.Androides.MiCafe.model.User;
 
 
@@ -34,11 +35,6 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText passwordEditText;
 
     private Button registerButton;
-
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
                 validateForm(view);
             }
         });
+        getDataFromIntent();
 
 
     }
@@ -73,9 +70,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(mailEditText.getText().toString()).matches()) {
-            //email.setError("Ingrese un email valido por favor");
 
-            //Crear una instancia de dialog
             AlertDialog.Builder dialogo = new AlertDialog.Builder(this);
 
             //Titulo
@@ -98,12 +93,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Log.e("Cancelar", "Clicked");
                 }
             });
-            dialogo.setNeutralButton("Para que?", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Log.e("Neutral", "Clicked");
-                }
-            });
+
 
             dialogo.setCancelable(false);
             dialogo.show();
@@ -114,8 +104,11 @@ public class RegisterActivity extends AppCompatActivity {
         User alumno = new User();
         alumno.setNombreUsuario(nombreEditText.getText().toString());
         alumno.setPassword(passwordEditText.getText().toString());
-
         alumno.setEmail(mailEditText.getText().toString());
+
+
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
+        dbHelper.insert(alumno);
 
 
         String json = new Gson().toJson(alumno);
@@ -126,15 +119,21 @@ public class RegisterActivity extends AppCompatActivity {
 
         Intent intent = new Intent();
         intent.putExtra(Constants.KEY_REGISTRAR_USUARIO, json);
-        setResult(RESULT_OK, intent); //OK: funciono, intent --> retornando el valor
-        finish(); //Cierra el activity
+        setResult(RESULT_OK, intent);
+        finish();
+    }
 
+    private void getDataFromIntent() {
+        Intent intent = getIntent();
+        String action = intent.getAction();
+        String type = intent.getType();
 
-        Intent intent2 = new Intent(this, MenuPrincipal.class);
-        startActivity(intent2);
-
-
-
+        if (Intent.ACTION_SEND.equals(action) && type != null) {
+            if ("text/plain".equals(type)) {
+                String texto = intent.getStringExtra(Intent.EXTRA_TEXT);
+                nombreEditText.setText(texto);
+            }
+        }
     }
 
     private void llenarUsuario (String usuario, String password){

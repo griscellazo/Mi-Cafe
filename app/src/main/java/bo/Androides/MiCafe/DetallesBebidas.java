@@ -3,7 +3,9 @@ package bo.Androides.MiCafe;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DetallesBebidas extends AppCompatActivity {
 
@@ -22,7 +24,14 @@ public class DetallesBebidas extends AppCompatActivity {
             titulo.setText(b.getString("TIT"));
             detalles.setText(b.getString("DET"));
         }
-
-
     }
+
+
+    public void verPedido(View view){
+        Intent intent1 = new Intent (this, VerPedido.class);
+        startActivity(intent1);
+    }
+
+
+
 }
