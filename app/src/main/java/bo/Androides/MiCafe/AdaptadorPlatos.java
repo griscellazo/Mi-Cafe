@@ -22,9 +22,12 @@ public class AdaptadorPlatos extends BaseAdapter {
     public View getView(int i, View convertView, ViewGroup parent) {
         final View vista = inflater.inflate(R.layout.activity_elemento_lista,null);
         TextView nombreDeJuego = (TextView) vista.findViewById(R.id.NombreDeJuego);
+        TextView precio = (TextView) vista.findViewById(R.id.precio);
         ImageView imagen = (ImageView) vista.findViewById(R.id.imagen);
         nombreDeJuego.setText(datos[i][0]);
+        precio.setText("Precio: " + datos[i][1]);
         imagen.setImageResource(datosImg[i]);
+
         imagen.setTag(i);
         imagen.setOnClickListener(new View.OnClickListener() {
             @Override

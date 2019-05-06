@@ -28,6 +28,10 @@ public class DetalleSnackYDulces extends AppCompatActivity {
         startActivity(intentverPedido);
     }
 
+    public void anadido (View view){
+        Toast.makeText(this, "Añadido a su lista de pedidos", Toast.LENGTH_SHORT).show();
+    }
+
 
 
 

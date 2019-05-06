@@ -20,19 +20,6 @@ public class Bebidas extends AppCompatActivity {
 
     List<Producto> productos = new ArrayList<>();
 
-    String[][] datos = {
-            {"Frutal", "Es un jugo delicioso y refrescante de frutas naturales."},
-            {"Coca Cola", "Es una sabrosa gaseosa para compartir en familia."},
-            {"Agua", "Sano y refrescante"},
-            {"Fanta", "Es una sabrosa gaseosa para compartir en familia."},
-            {"Jugo de Uva", "Refrescante y delicioso."},
-            {"Jugo de Piña", "Refrescante y delicioso."},
-            {"Jugo de Sandia", "Refrescante y delicioso."},
-            {"Jugo de Manzana", "Refrescante y delicioso."}
-
-    };
-
-    int[] datosImg = {R.drawable.frutal_500ml, R.drawable.coca_500ml, R.drawable.agua, R.drawable.fanta_500ml, R.drawable.jugo_de_uva, R.drawable.jugo_de_pina, R.drawable.jugo_de_sandia, R.drawable.jugo_de_manzana};
 
 
     @Override
