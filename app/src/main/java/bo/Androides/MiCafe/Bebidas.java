@@ -9,9 +9,16 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import bo.Androides.MiCafe.model.Producto;
+
 public class Bebidas extends AppCompatActivity {
 
     ListView lista;
+
+    List<Producto> productos = new ArrayList<>();
 
     String[][] datos = {
             {"Frutal", "Es un jugo delicioso y refrescante de frutas naturales."},
@@ -25,9 +32,7 @@ public class Bebidas extends AppCompatActivity {
 
     };
 
-    int [] datosImg = {R.drawable.frutal_500ml, R.drawable.coca_500ml, R.drawable.agua, R.drawable.fanta_500ml,R.drawable.jugo_de_uva,R.drawable.jugo_de_pina,R.drawable.jugo_de_sandia,R.drawable.jugo_de_manzana};
-
-
+    int[] datosImg = {R.drawable.frutal_500ml, R.drawable.coca_500ml, R.drawable.agua, R.drawable.fanta_500ml, R.drawable.jugo_de_uva, R.drawable.jugo_de_pina, R.drawable.jugo_de_sandia, R.drawable.jugo_de_manzana};
 
 
     @Override
@@ -35,19 +40,33 @@ public class Bebidas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bebidas);
 
-
         lista = (ListView) findViewById(R.id.Lista1);
 
-        lista.setAdapter(new AdaptadorBebidas(this,datos,datosImg));
+        llenarProductos();
+        lista.setAdapter(new AdaptadorBebidas(this, productos));
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent visorDetalles = new Intent(view.getContext(), DetallesBebidas.class);
-                visorDetalles.putExtra("TIT", datos[position][0]);
-                visorDetalles.putExtra("DET", datos[position][1]);
+                Producto producto = productos.get(position);
+                visorDetalles.putExtra("TIT", producto.getNombre());
+                visorDetalles.putExtra("DET", producto.getDetalle());
                 startActivity(visorDetalles);
             }
         });
+    }
+
+    private void llenarProductos() {
+        productos.add(new Producto(1,
+                "Frutal 500",
+                "Es un jugo delicioso y refrescante de frutas naturales.",
+                5.00,
+                R.drawable.frutal_500ml));
+        productos.add(new Producto(2,
+                "Frutal 1lt",
+                "Es un jugo delicioso y refrescante de frutas naturales.",
+                13.50,
+                R.drawable.frutal_500ml));
     }
 }

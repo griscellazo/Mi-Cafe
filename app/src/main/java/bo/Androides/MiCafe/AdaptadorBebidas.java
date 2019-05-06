@@ -9,61 +9,66 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import bo.Androides.MiCafe.model.Producto;
+
 public class AdaptadorBebidas extends BaseAdapter {
 
     private static LayoutInflater inflater = null;
 
     Context contexto;
-    String[][] datos;
-    int[] datosImg;
+    List<Producto> items = new ArrayList<>();
 
-    public AdaptadorBebidas (Context contexto, String[][] datos, int[] imagenes){
+    public AdaptadorBebidas(Context contexto, List<Producto> productos) {
         this.contexto = contexto;
-        this.datos = datos;
-        this.datosImg = imagenes;
+        this.items = productos;
         inflater = (LayoutInflater) contexto.getSystemService(contexto.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
     public View getView(int i, View convertView, ViewGroup parent) {
 
-        final View vista = inflater.inflate(R.layout.activity_elemento_lista,null);
-        TextView nombreDeJuego = (TextView) vista.findViewById(R.id.NombreDeJuego);
+        ViewHolder viewHolder = null;
+        if (convertView == null) {
+            viewHolder = new ViewHolder();
 
-        ImageView imagen = (ImageView) vista.findViewById(R.id.imagen);
+            //Inflater nos permite usar un layout dentro de un componente
+            LayoutInflater inflater = (LayoutInflater) contexto.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(R.layout.activity_elemento_lista, null); //Cual layout y principal o no.
 
-        nombreDeJuego.setText(datos[i][0]);
+            viewHolder.nombre = (TextView) convertView.findViewById(R.id.NombreDeJuego);
+            viewHolder.imagen = (ImageView) convertView.findViewById(R.id.imagen);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder) convertView.getTag();
+        }
 
-        imagen.setImageResource(datosImg[i]);
+        Producto producto = this.items.get(i);
+        viewHolder.nombre.setText(producto.getNombre());
+        viewHolder.imagen.setImageResource(producto.getImagen());
+        return convertView;
+    }
 
-
-        imagen.setTag(i);
-        imagen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick (View v){
-                Intent visorImagen = new Intent(contexto, VisorImagen.class);
-                visorImagen.putExtra("IMG", datosImg [(Integer)v.getTag()]);
-                contexto.startActivity(visorImagen);
-            }
-        });
-
-
-        return vista;
+    class ViewHolder {
+        TextView nombre;
+        ImageView imagen;
     }
 
     @Override
     public int getCount() {
-        return datosImg.length;
+        return items.size();
     }
 
     @Override
-    public Object getItem(int position) {
-        return null;
+    public Producto getItem(int position) {
+        return this.items.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return this.items.get(position).getId();
     }
 
 
