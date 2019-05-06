@@ -44,7 +44,7 @@
             android:id="@+id/anadirPlatos"
             android:layout_width="match_parent"
             android:layout_height="71dp"
-            android:onClick="mensaje"
+            android:onClick="anadido"
             android:text="Añadir a mi pedido" />
         <Button
             android:id="@+id/verPedido"

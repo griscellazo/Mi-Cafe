@@ -12,6 +12,9 @@
         android:layout_height="match_parent"
         android:background="@drawable/fondopantallas">
 
+
+
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -28,6 +31,7 @@
                     android:background="#FFEB3B"
                     android:gravity="center"
                     android:text="MENÚ PRINCIPAL" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -60,10 +64,8 @@
                     android:text="SNACK Y DULCES "
                     />
             </LinearLayout>
-
         </RelativeLayout>
 
     </RelativeLayout>
-
 
 </android.support.constraint.ConstraintLayout>

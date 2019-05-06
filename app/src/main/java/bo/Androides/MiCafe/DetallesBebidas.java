@@ -32,6 +32,10 @@ public class DetallesBebidas extends AppCompatActivity {
         startActivity(intent1);
     }
 
+    public void anadido (View view){
+        Toast.makeText(this, "Añadido a su lista de pedidos", Toast.LENGTH_SHORT).show();
+    }
+
 
 
 }
