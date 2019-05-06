@@ -7,9 +7,16 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import bo.Androides.MiCafe.model.Producto;
+
 public class SnackYDulces extends AppCompatActivity {
 
     ListView lista;
+
+    List<Producto> productos = new ArrayList<>();
 
     String[][] datos = {
             {"Club Social ", "Deliciosa y crujientes galletas "},
@@ -34,19 +41,49 @@ public class SnackYDulces extends AppCompatActivity {
 
         lista = (ListView) findViewById(R.id.Lista3);
 
-        lista.setAdapter(new AdaptadorSnackYDulces(this,datos,datosImg));
+        llenarProductos();
+        lista.setAdapter(new AdaptadorSnackYDulces(this, productos));
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent visorDetalles = new Intent(view.getContext(), DetalleSnackYDulces.class);
-                visorDetalles.putExtra("TIT", datos[position][0]);
-                visorDetalles.putExtra("DET", datos[position][1]);
+                Producto producto = productos.get(position);
+                visorDetalles.putExtra("TIT", producto.getNombre());
+                visorDetalles.putExtra("DET", producto.getDetalle());
                 startActivity(visorDetalles);
             }
         });
 
 
 
+    }
+
+    private void llenarProductos(){
+        productos.add(new Producto(1,
+                "Club Social",
+                "Deliciosa y crujientes galletas ",
+                2.00,
+                R.drawable.club_social));
+        productos.add((new Producto( 2,
+                "Doritos",
+                "Deliciosos y crujientes chips de distintos sabores ",
+                5.00,
+                R.drawable.doritos)));
+        productos.add(new Producto(3,
+                "Alexander Cookie",
+                "Deliciosa galleta, de la mejor cafeteria de La Paz ",
+                7.00,
+                R.drawable.galletas_alexander));
+        productos.add((new Producto( 4,
+                "Lays",
+                "Sabrosas papas fritas para compartir ",
+                5.00,
+                R.drawable.lays)));
+        productos.add((new Producto( 5,
+                "Oreo",
+                "Deliciosa galleta de chocolate con relleno sabor leche",
+                2.50,
+                R.drawable.oreo)));
     }
 }
