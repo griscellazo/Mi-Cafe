@@ -17,9 +17,13 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE usuarios (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
                 " usuario VARCHAR NOT NULL," +
                 " password VARCHAR NOT NULL," +
-                " edad INTEGER," +
-                " email VARCHAR NOT NULL," +
-                " codigoUpb INTEGER NOT NULL)");
+                " email VARCHAR NOT NULL)");
+
+        db.execSQL("CREATE TABLE pedidos (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
+                " producto VARCHAR NOT NULL," +
+                " precio DOUBLE NOT NULL," +
+                " cantidad INTEGER)");
+
         Log.d("Database", "Created");
     }
     @Override

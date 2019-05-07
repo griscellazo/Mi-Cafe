@@ -5,6 +5,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import bo.Androides.MiCafe.model.Pedido;
 import bo.Androides.MiCafe.model.User;
 
     public class DatabaseHelper {
@@ -20,9 +24,7 @@ import bo.Androides.MiCafe.model.User;
             ContentValues contentValues = new ContentValues();
             contentValues.put("usuario", user.getNombreUsuario());
             contentValues.put("password", user.getPassword());
-            contentValues.put("edad", user.getEdad());
             contentValues.put("email", user.getEmail());
-            contentValues.put("codigoUpb", user.getCodigoUpb());
             this.mDatabase.insert("usuarios",
                     null,
                     contentValues);
@@ -34,8 +36,8 @@ import bo.Androides.MiCafe.model.User;
             params[0] = usuario;
             params[1] = password;
 
-            Cursor cursor = this.mDatabase.rawQuery("SELECT codigoUpb FROM usuarios" +
-                    " WHERE usuario=? AND password = ?", params);
+            Cursor cursor = this.mDatabase.rawQuery("SELECT password FROM usuarios" +
+                    " WHERE usuario=? ", params);
 
             if (cursor.moveToFirst()) {
                 Log.d("CodigoUPB", "" + cursor.getInt(0));
@@ -43,6 +45,54 @@ import bo.Androides.MiCafe.model.User;
             } else {
                 return false;
             }
+        }
+
+        public void agregarAlCarrito(Pedido pedido){
+            ContentValues contentValues = new ContentValues();
+            contentValues.put("producto", pedido.getProducto());
+            contentValues.put("precio", pedido.getPrecio());
+            contentValues.put("cantidad", pedido.getCantidad());
+            this.mDatabase.insert("pedidos",
+                    null,
+                    contentValues);
+            this.mDatabase.close();
+        }
+
+        public List<Pedido> getPedidos(){
+            List<Pedido> pedidos = new ArrayList<>();
+
+            Cursor cursor = this.mDatabase.rawQuery("SELECT id, producto, precio, cantidad FROM pedidos", null);
+            if(cursor.moveToFirst()){
+                do{
+                    int id = cursor.getInt(0);
+                    String producto = cursor.getString(1);
+                    double precio = cursor.getDouble(2);
+                    int cantidad = cursor.getInt(3);
+
+                }while (cursor.moveToNext());
+            }
+
+            return pedidos;
+        }
+
+        public double getTotal(){
+            double total =0;
+
+            Cursor cursor = this.mDatabase.rawQuery("SELECT precio, cantidad FROM pedidos", null);
+            if(cursor.moveToFirst()){
+                do{
+                    int cantidad = cursor.getInt(0);
+                    double precio = cursor.getDouble(1);
+
+                    total += (cantidad*precio);
+                }while (cursor.moveToNext());
+            }
+            return total;
+        }
+
+        public void limpiarCarrito(){
+            this.mDatabase.delete("pedidos","",null);
+            this.mDatabase.close();
         }
     }
 
