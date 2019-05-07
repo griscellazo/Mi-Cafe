@@ -55,7 +55,7 @@
         app:layout_constraintGuide_begin="132dp" />
 
     <TextView
-        android:id="@+id/NombreDeJuego"
+        android:id="@+id/NombreDeBebida"
         android:layout_width="wrap_content"
         android:layout_height="26dp"
         android:layout_marginStart="8dp"
@@ -87,5 +87,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.416"
         app:srcCompat="@drawable/frutal_500ml" />
+    <TextView
+        android:id="@+id/precioBebidas"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
 </android.support.constraint.ConstraintLayout>

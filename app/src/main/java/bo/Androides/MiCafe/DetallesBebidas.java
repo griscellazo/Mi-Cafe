@@ -4,15 +4,23 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class DetallesBebidas extends AppCompatActivity {
 
+    private Spinner opciones;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalles_bebidas);
+
+        opciones = (Spinner) findViewById(R.id.elegir);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.opciones, android.R.layout.simple_spinner_item);
+        opciones.setAdapter(adapter);
 
         TextView titulo = (TextView) findViewById(R.id.titulodescripcion);
         TextView detalles = (TextView) findViewById(R.id.descripcion);

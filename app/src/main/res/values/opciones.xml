@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name = "opciones">
-        <item>Tamaño</item>
-        <item>Personal 2bs.</item>
-        <item>Mediana 5bs.</item>
-        <item>Grande 10bs.</item>
+        <item>Cantidad</item>
+        <item>1 producto </item>
+        <item>2 productos</item>
+        <item>3 productos</item>
+        <item>4 productos</item>
+        <item>5 productos</item>
+        <item>6 productos</item>
+        <item>7 productos</item>
+        <item>8 productos</item>
+        <item>9 productos</item>
+        <item>10 productos</item>
+
+
 
     </string-array>
 </resources>

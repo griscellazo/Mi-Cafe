@@ -8,6 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,8 +37,9 @@ public class AdaptadorPlatos extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) contexto.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.activity_elemento_lista_platos, null);
 
-            viewHolder.nombre = (TextView) convertView.findViewById(R.id.NombreDeJuego3);
+            viewHolder.nombre = (TextView) convertView.findViewById(R.id.NombreDePlato);
             viewHolder.imagen = (ImageView) convertView.findViewById(R.id.imagen3);
+        //    viewHolder.precioPlatos = (TextView) convertView.findViewById(R.id.precioPlatos);
             convertView.setTag(viewHolder);
         }else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -45,12 +48,14 @@ public class AdaptadorPlatos extends BaseAdapter {
         Producto producto = this.items.get(i);
         viewHolder.nombre.setText(producto.getNombre());
         viewHolder.imagen.setImageResource(producto.getImagen());
+    //    viewHolder.precioPlatos.setText((int) producto.getPrecio());
         return convertView;
     }
 
     class ViewHolder {
         TextView nombre;
         ImageView imagen;
+        TextView precioPlatos;
     }
 
     @Override

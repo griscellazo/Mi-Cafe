@@ -38,8 +38,9 @@ public class AdaptadorBebidas extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) contexto.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.activity_elemento_lista, null); //Cual layout y principal o no.
 
-            viewHolder.nombre = (TextView) convertView.findViewById(R.id.NombreDeJuego);
+            viewHolder.nombre = (TextView) convertView.findViewById(R.id.NombreDeBebida);
             viewHolder.imagen = (ImageView) convertView.findViewById(R.id.imagen);
+         //   viewHolder.precioBebidas =  (TextView) convertView.findViewById(R.id.precioBebidas);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -48,12 +49,14 @@ public class AdaptadorBebidas extends BaseAdapter {
         Producto producto = this.items.get(i);
         viewHolder.nombre.setText(producto.getNombre());
         viewHolder.imagen.setImageResource(producto.getImagen());
+       // viewHolder.precioBebidas.setText((int)producto.getPrecio());
         return convertView;
     }
 
     class ViewHolder {
         TextView nombre;
         ImageView imagen;
+        TextView precioBebidas;
     }
 
     @Override
