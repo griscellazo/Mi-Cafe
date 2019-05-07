@@ -56,7 +56,7 @@
         app:layout_constraintGuide_begin="132dp" />
 
     <TextView
-        android:id="@+id/NombreDeJuego"
+        android:id="@+id/NombreDeJuego3"
         android:layout_width="wrap_content"
         android:layout_height="26dp"
         android:layout_marginStart="8dp"
@@ -73,7 +73,7 @@
 
 
     <ImageView
-        android:id="@+id/imagen"
+        android:id="@+id/imagen3"
         android:layout_width="152dp"
         android:layout_height="120dp"
         android:layout_marginStart="8dp"

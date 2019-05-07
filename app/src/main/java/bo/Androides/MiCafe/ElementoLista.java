@@ -9,7 +9,7 @@ public class ElementoLista extends AppCompatActivity {
 
     private Spinner opciones;
 
-    @Override
+   /* @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elemento_lista);
@@ -20,5 +20,5 @@ public class ElementoLista extends AppCompatActivity {
                 R.array.opciones,android.R.layout.simple_spinner_item);
 
         opciones.setAdapter(adapter);
-    }
+    }*/
 }
