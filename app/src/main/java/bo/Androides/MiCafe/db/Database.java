@@ -17,7 +17,8 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE usuarios (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
                 " usuario VARCHAR NOT NULL," +
                 " password VARCHAR NOT NULL," +
-                " email VARCHAR NOT NULL)");
+                " email VARCHAR NOT NULL," +
+                " codigoUpb INTEGER NOT NULL)");
 
         db.execSQL("CREATE TABLE pedidos (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
                 " producto VARCHAR NOT NULL," +
@@ -26,6 +27,7 @@ public class Database extends SQLiteOpenHelper {
 
         Log.d("Database", "Created");
     }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     }

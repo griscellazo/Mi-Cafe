@@ -43,37 +43,37 @@ public class PlatosALaCarta extends AppCompatActivity {
         productos.add(new Producto(1,
                 "Alitas",
                 "Plato con deliciosas alitas y papas",
-                20.00,
+                20,
                 R.drawable.alitas));
         productos.add(new Producto(2,
                 "Asado a la olla",
                 "Estofado de carne acompañado con arroz y papas cocidas",
-                18.00,
+                18,
                 R.drawable.asado_a_la_olla));
         productos.add(new Producto(3,
                 "Hamburguesa",
                 "Hamburguesa de carne de res acompañada con queso y ensalada; aparte vienen papas fritas",
-                15.00,
+                15,
                 R.drawable.hamburguesa));
         productos.add(new Producto(4,
                 "Lasagna",
                 "Hojas de pasta italiana con salsa bechamel y bolognesa",
-                20.00,
+                20,
                 R.drawable.lasagna));
         productos.add(new Producto(5,
                 "Nuggets",
                 "Nuggets acompañados de papas y salsa golf",
-                20.00,
+                20,
                 R.drawable.nuggets));
         productos.add(new Producto(6,
                 "Papas a la huancaina",
                 "Papas servida con la autentica salsa peruana a la huancaina",
-                18.00,
+                18,
                 R.drawable.papas_a_la_huancaina));
         productos.add(new Producto(7,
                 "Pollo a la plancha",
                 "Pollo cocido en sarten con un minimo de aceite servido con papas y arroz",
-                18.00,
+                18,
                 R.drawable.pollo_a_la_plancha));
 
     }

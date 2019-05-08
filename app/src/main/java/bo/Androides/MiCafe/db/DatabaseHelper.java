@@ -19,12 +19,12 @@ import bo.Androides.MiCafe.model.User;
             this.mDatabase = instancia.getWritableDatabase();
         }
 
-
         public void insert(User user) {
             ContentValues contentValues = new ContentValues();
             contentValues.put("usuario", user.getNombreUsuario());
             contentValues.put("password", user.getPassword());
             contentValues.put("email", user.getEmail());
+           //* contentValues.put("codigoUpb", user.getCodigoUpb());
             this.mDatabase.insert("usuarios",
                     null,
                     contentValues);
@@ -35,9 +35,12 @@ import bo.Androides.MiCafe.model.User;
             String[] params = new String[2];
             params[0] = usuario;
             params[1] = password;
+            /*
+            Cursor cursor = this.mDatabase.rawQuery("SELECT codigoUpb FROM usuarios" +
+                    " WHERE usuario=? AND password = ?", params);*/
 
-            Cursor cursor = this.mDatabase.rawQuery("SELECT password FROM usuarios" +
-                    " WHERE usuario=? ", params);
+            Cursor cursor = this.mDatabase.rawQuery("SELECT password FROM usuarios", null);
+
 
             if (cursor.moveToFirst()) {
                 Log.d("CodigoUPB", "" + cursor.getInt(0));

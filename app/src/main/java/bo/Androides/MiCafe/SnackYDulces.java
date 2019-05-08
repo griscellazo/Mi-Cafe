@@ -63,27 +63,27 @@ public class SnackYDulces extends AppCompatActivity {
         productos.add(new Producto(1,
                 "Club Social",
                 "Deliciosa y crujientes galletas ",
-                2.00,
+                2,
                 R.drawable.club_social));
         productos.add((new Producto( 2,
                 "Doritos",
                 "Deliciosos y crujientes chips de distintos sabores ",
-                5.00,
+                5,
                 R.drawable.doritos)));
         productos.add(new Producto(3,
                 "Alexander Cookie",
                 "Deliciosa galleta, de la mejor cafeteria de La Paz ",
-                7.00,
+                7,
                 R.drawable.galletas_alexander));
         productos.add((new Producto( 4,
                 "Lays",
                 "Sabrosas papas fritas para compartir ",
-                5.00,
+                5,
                 R.drawable.lays)));
         productos.add((new Producto( 5,
                 "Oreo",
                 "Deliciosa galleta de chocolate con relleno sabor leche",
-                2.50,
+                2,
                 R.drawable.oreo)));
     }
 }

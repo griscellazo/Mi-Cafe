@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -54,9 +55,6 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
         getDataFromIntent();
-
-
-
     }
 
     private void validateForm(View v){
@@ -95,24 +93,22 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             });
 
-
             dialogo.setCancelable(false);
             dialogo.show();
 
             return;
         }
 
-        User alumno = new User();
-        alumno.setNombreUsuario(nombreEditText.getText().toString());
-        alumno.setPassword(passwordEditText.getText().toString());
-        alumno.setEmail(mailEditText.getText().toString());
-
+        User cliente = new User();
+        cliente.setNombreUsuario(nombreEditText.getText().toString());
+        cliente.setPassword(passwordEditText.getText().toString());
+        cliente.setEmail(mailEditText.getText().toString());
 
         DatabaseHelper dbHelper = new DatabaseHelper(this);
-        dbHelper.insert(alumno);
+        dbHelper.insert(cliente);
 
 
-        String json = new Gson().toJson(alumno);
+        String json = new Gson().toJson(cliente);
         Log.e("UsuarioEnviado", json);
 
         llenarUsuario(nombreEditText.getText().toString(),
@@ -122,6 +118,8 @@ public class RegisterActivity extends AppCompatActivity {
         intent.putExtra(Constants.KEY_REGISTRAR_USUARIO, json);
         setResult(RESULT_OK, intent);
         finish();
+
+
     }
 
     private void getDataFromIntent() {

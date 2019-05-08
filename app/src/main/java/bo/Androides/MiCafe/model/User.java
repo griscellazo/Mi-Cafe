@@ -35,14 +35,6 @@ public class User {
         this.password = password;
     }
 
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
     public String getEmail() {
         return email;
     }

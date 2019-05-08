@@ -39,7 +39,7 @@ public class AdaptadorPlatos extends BaseAdapter {
 
             viewHolder.nombre = (TextView) convertView.findViewById(R.id.NombreDePlato);
             viewHolder.imagen = (ImageView) convertView.findViewById(R.id.imagen3);
-        //    viewHolder.precioPlatos = (TextView) convertView.findViewById(R.id.precioPlatos);
+    //        viewHolder.precioPlatos = (TextView) convertView.findViewById(R.id.precioPlatos);
             convertView.setTag(viewHolder);
         }else {
             viewHolder = (ViewHolder) convertView.getTag();
