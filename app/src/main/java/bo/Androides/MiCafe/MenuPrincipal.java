@@ -1,5 +1,6 @@
 package bo.Androides.MiCafe;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 
@@ -18,6 +19,7 @@ import android.view.View;
 
 public class MenuPrincipal extends AppCompatActivity {
 
+    private Context context;
     private Toolbar toolbar; // Usaremos un toolbar personalizado, para agregar el icono del Drawer a la izquierda
     private ActionBarDrawerToggle drawerToggle; // El objeto del botón del drawer
     private DrawerLayout drawerLayout; // Nuestro DrawerLayout
@@ -27,6 +29,22 @@ public class MenuPrincipal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
+        context=this;
+
+        this.toolbar = findViewById(R.id.toolbar);
+        this.drawerLayout = findViewById(R.id.navigationDrawer);
+
+        if(this.toolbar != null) {
+            drawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.OpenDrawer,R.string.CloseDrawer);
+            drawerToggle.setDrawerIndicatorEnabled(false);
+            drawerToggle.setHomeAsUpIndicator(R.drawable.icon_hamburger);
+            drawerToggle.setToolbarNavigationClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    drawerLayout.openDrawer(GravityCompat.START);
+                }
+            });
+        }
     }
 
     public void bebidasClick (View view){

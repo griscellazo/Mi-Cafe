@@ -4,20 +4,36 @@
     <string name="title_password">Contraseña</string>
     <string name="button_login">Iniciar_sesión</string>
     <string name="button_sign_in">Registrate</string>
-    <string name="usuario">usuario</string>
     <string name="password">password</string>
     <string name="contraseña">contraseña</string>
-
     <string name="title">BEBIDAS</string>
+    <string name="soporte">Soporte</string>
+    <string name="inicio">Inicio</string>
+    <string name="perfil">Perfil</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="compartir">Compartir</string>
+    <string name="otros">Otros</string>
+        <string name="hello_world">Hello world!</string>
+        <string name="action_settings">Settings</string>
+        <string name="seccion_1">Sección 1</string>
+        <string name="seccion_2">Sección 2</string>
+        <string name="otras_opciones">Otras opciones</string>
+        <string name="opcion_1">Opción 1</string>
+        <string name="opcion_2">Opción 2</string>
+        <string name="seccion_3">Sección 3</string>
+        <string name="usuario">Usuario</string>
+        <string name="menu_abierto">Menu Abierto</string>
+        <string name="menu_cerrado">Menu Cerrado</string>
+        <string name="fragment1">Fragment 1</string>
+        <string name="fragment2">Fragment 2</string>
+        <string name="fragment3">Fragment 3</string>
 
 
-
-
-
-
-
-
-
+<string name="OpenDrawer">Open Drawer</string>
+    <string name="CloseDrawer">Close Drawer</string>
+    <string name="configuracion">Configuracion</string>
+    <string name="imagenavview">inicio</string>
+    <string name="todo">TODO</string>
 
 
 </resources>

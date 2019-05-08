@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="colorPrimary">#EFD82E</color>
     <color name="colorPrimaryDark">#9228E2</color>
     <color name="colorAccent">#14F462</color>
@@ -10,4 +11,8 @@
     <color name="transparentWhite">#40FFFFFF</color>
     <color name="Negro">#212121</color>
     <color name="RojoIntenso">#b71c1c</color>
+    <color name="color_primary">#3F51B5</color>
+    <color name="color_primary_dark">#303F9F</color>
+    <color name="color_accent">#FF5252</color>
+
 </resources>
