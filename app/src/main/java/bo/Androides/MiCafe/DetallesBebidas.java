@@ -24,6 +24,7 @@ public class DetallesBebidas extends AppCompatActivity {
 
         TextView titulo = (TextView) findViewById(R.id.titulodescripcion);
         TextView detalles = (TextView) findViewById(R.id.descripcion);
+        TextView precio = (TextView) findViewById(R.id.precioBebidas);
 
         Intent intent = getIntent();
         Bundle b = ((Intent) intent).getExtras();
