@@ -4,14 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/color_azul_fondo">
 
-    <ImageView
-        android:id="@+id/imageViewBackground"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/fondopantallas"
-        app:srcCompat="@drawable/fondopantallas" />
+
 
 
     <LinearLayout
@@ -22,15 +18,17 @@
         <TextView
             android:id="@+id/textViewReservarPedido"
             android:layout_width="match_parent"
-            android:layout_height="33dp"
-            android:background="#FFEB3B"
+            android:layout_height="50dp"
+            android:background="@color/color_azul_claro"
             android:gravity="center"
             android:text="@string/title"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            tools:text="RESERVAR PEDIDO" />
+            tools:text="    RESERVAR PEDIDO"
+            android:textColor="@color/white"/>
     </LinearLayout>
 
     <RelativeLayout
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/space_lg"
@@ -39,74 +37,72 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="20dp">
 
-            <ImageView
-                android:id="@+id/backbutton"
-                android:layout_width="34dp"
-                android:layout_height="33dp"
-                app:srcCompat="@drawable/atras" />
 
             <TextView
+
                 android:id="@+id/textViewHorarioDe"
-                android:layout_width="270dp"
-                android:layout_height="100dp"
-                android:background="#75FCD5"
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_azul_claro"
                 android:gravity="center"
-                android:text="@string/title"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                tools:text="Entrega Del Pedido." />
+                tools:text="    Entrega Del Pedido"
+                android:textColor="@color/white"/>
 
             <TextView
-                android:id="@+id/textViewHora"
-                android:layout_width="67dp"
-                android:layout_height="33dp"
-                android:background="#F502CB"
-                android:gravity="center"
-                android:text="@string/title"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                tools:text="Hora:" />
-
-            <TextView
-                android:id="@+id/textViewMinutos"
-                android:layout_width="67dp"
-                android:layout_height="32dp"
-                android:background="#F502CB"
-                android:text="@string/title"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                tools:text="Minutos:" />
+                android:id="@+id/TituloDescripcionDeTuPedido"
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_cafe_botones"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/white"
+                tools:text="Descripcion de tu pedido:"/>
 
             <TextView
                 android:id="@+id/textViewDescripcionDeTuPedido"
                 android:layout_width="match_parent"
-                android:layout_height="291dp"
-                android:background="#FFEB3B"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:text="@string/title"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                tools:text="Descripcion de tu pedido:" />
+                android:textColor="@color/color_azul_fondo"
+                />
+
+
 
             <TextView
                 android:id="@+id/textViewPlanDePagos"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
-
-                android:background="#75FCD5"
+                android:layout_marginTop="60dp"
+                android:background="@color/color_azul_claro"
                 android:gravity="center"
-                android:text="@string/title"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/white"
                 tools:text="Opciones de pago" />
 
             <Button
+                android:layout_marginTop="10dp"
                 android:id="@+id/buttonEfectivo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="eliminarDatos"
+                android:background="@color/color_cafe_botones"
+                android:textColor="@color/white"
                 android:text="Efectivo" />
 
             <Button
+                android:layout_marginTop="10dp"
                 android:id="@+id/buttonTarjeta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/color_cafe_botones"
+                android:textColor="@color/white"
                 android:text="Tarjeta" />
 
 

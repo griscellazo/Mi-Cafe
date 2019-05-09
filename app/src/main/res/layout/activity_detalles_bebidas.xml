@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetallesBebidas">
+    tools:context=".DetallesBebidas"
+    android:background="@color/color_azul_fondo"
+    >
 
     <TextView
         android:id="@+id/titulodescripcion"
@@ -12,34 +14,42 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="TextView"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        />
 
     <TextView
         android:id="@+id/descripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulodescripcion" />
 
 
     <Spinner
-        android:id="@+id/elegir"
         android:layout_width="215dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:id="@+id/elegir"
         android:layout_marginEnd="84dp"
         android:layout_marginRight="84dp"
+        android:layout_marginBottom="60dp"
         android:textSize="16sp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -52,25 +62,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-32dp">
+        android:padding="20dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp">
 
         <TextView
-            android:layout_width="229dp"
-            android:layout_height="300dp" />
+            android:layout_width="172dp"
+            android:layout_height="260dp" />
 
         <Button
             android:id="@+id/anadirBebidas"
             android:layout_width="match_parent"
             android:layout_height="71dp"
+            android:background="@color/color_cafe_botones"
             android:onClick="anadido"
-            android:text="Añadir a mi pedido" />
+            android:text="Añadir a mi pedido"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
 
         <Button
             android:id="@+id/verPedido"
             android:layout_width="match_parent"
             android:layout_height="71dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/color_cafe_botones"
             android:onClick="verPedido"
-            android:text="Ver mi pedido" />
+            android:text="Ver mi pedido"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetalleSnackYDulces">
+    tools:context=".DetalleSnackYDulces"
+    android:background="@color/color_azul_fondo">
 
     <TextView
         android:id="@+id/titulodescripcion3"
@@ -12,11 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="TextView"
-        android:textSize="18sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20dp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,10 +28,12 @@
         android:id="@+id/descripcion3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
         android:text="TextView"
+        android:textSize="18dp"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulodescripcion3" />
     <Spinner
@@ -37,7 +42,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="84dp"
         android:layout_marginRight="84dp"
+        android:layout_marginBottom="60dp"
         android:textSize="16sp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -49,25 +56,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="-156dp"
-        tools:layout_editor_absoluteY="240dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="47dp"
+        android:padding="20dp">
 
         <TextView
             android:layout_width="229dp"
-            android:layout_height="300dp" />
+            android:layout_height="260dp" />
 
         <Button
             android:id="@+id/anadirSnackYDulces"
             android:layout_width="match_parent"
             android:layout_height="71dp"
             android:onClick="anadido"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:background="@color/color_cafe_botones"
             android:text="Añadir a mi pedido" />
 
         <Button
             android:id="@+id/verPedido"
             android:layout_width="match_parent"
             android:layout_height="71dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="18dp"
             android:onClick="verPedido"
+            android:background="@color/color_cafe_botones"
             android:text="Ver mi pedido" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

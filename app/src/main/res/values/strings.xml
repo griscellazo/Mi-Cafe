@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MI CAFE</string>
-    <string name="title_username">  Usuario</string>
-    <string name="title_password"> Contraseña</string>
+    <string name="title_username">      Usuario</string>
+    <string name="title_password">      Contraseña</string>
     <string name="button_login">Iniciar_sesión</string>
     <string name="button_sign_in">Registrate</string>
     <string name="password">  password</string>

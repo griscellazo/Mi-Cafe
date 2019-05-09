@@ -9,29 +9,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/color_azul_fondo"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textViewReservarPedido"
             android:layout_width="match_parent"
-            android:layout_height="33dp"
-            android:background="#FFEB3B"
+            android:layout_height="50dp"
+            android:background="@color/color_azul_claro"
             android:gravity="center"
             android:text="@string/title"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            tools:text="PEDIDO" />
+            android:layout_marginBottom="0dp"
+            tools:text="PEDIDO"
+            android:textColor="@color/white"
+            />
 
-        <ImageView
-            android:id="@+id/imageViewBackground"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/fondopantallas"
-            app:srcCompat="@drawable/fondopantallas" />
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
         android:padding="@dimen/space_lg"
         tools:context=".LoginActivity">
 
@@ -40,17 +39,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/backbutton"
-                android:layout_width="34dp"
-                android:layout_height="33dp"
-                app:srcCompat="@drawable/atras" />
-
-            <TextView
-                android:id="@+id/textViewHorarioDe"
-                android:layout_width="match_parent"
-                android:layout_height="293dp" />
-
             <TextView
                 android:id="@+id/textViewPlanDePagos"
                 android:layout_width="match_parent"
@@ -58,26 +46,59 @@
                 android:gravity="center"
                 android:text="@string/title"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/white"
+                android:textSize="20dp"
                 tools:text="¿Deseas Añadir Algo Mas A Tu Pedido?" />
+
+            <Button
+                android:id="@+id/buttonSi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:onClick="retornarAlMenu"
+                android:background="@color/color_cafe_botones"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:text="Si, volver al menú" />
 
             <Button
                 android:id="@+id/buttonCurso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="registrarClick"
-                android:text="Reservar Pedido" />
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:onClick="ReservarPedido"
+                android:background="@color/color_cafe_botones"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:text="No, Reservar Pedido en restaurante" />
 
             <Button
                 android:id="@+id/buttonEfectivo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="eliminarDatos"
-                android:text="Mandar Pedido" />
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:onClick="MandarPedido"
+                android:layout_marginTop="40dp"
+                android:background="@color/color_cafe_botones"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:text="No, Mandar Pedido al aula" />
 
             <Button
                 android:id="@+id/buttonTarjeta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/color_cafe_botones"
+                android:textColor="@color/white"
+                android:onClick="eliminarDatos"
+                android:textSize="18dp"
                 android:text="Cancelar Pedido" />
 
 

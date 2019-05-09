@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_azul_fondo"
     tools:context="bo.Androides.MiCafe.ElementoListaVerPedido">
 
     <android.support.constraint.Guideline
@@ -66,6 +67,7 @@
         android:layout_marginRight="8dp"
         android:text="TextView"
         android:textSize="18sp"
+        android:textColor="@color/white"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
