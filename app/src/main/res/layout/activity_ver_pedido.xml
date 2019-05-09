@@ -7,7 +7,7 @@
     tools:context="bo.Androides.MiCafe.VerPedido">
 
     <ListView
-        android:id="@+id/Lista1"
+        android:id="@+id/ListaPedido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

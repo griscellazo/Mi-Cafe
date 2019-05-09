@@ -66,6 +66,7 @@
             android:id="@+id/verPedido"
             android:layout_width="match_parent"
             android:layout_height="71dp"
+            android:onClick="verPedidoPlatos"
             android:text="Ver mi pedido" />
 
     </LinearLayout>

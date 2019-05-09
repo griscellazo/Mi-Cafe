@@ -33,7 +33,7 @@ public class DetallesPlatos extends AppCompatActivity {
         }
     }
 
-    public void verPedido (View view){
+    public void verPedidoPlatos (View view){
         Intent intentPlatos = new Intent(this,VerPedido.class);
         startActivity(intentPlatos);
     }

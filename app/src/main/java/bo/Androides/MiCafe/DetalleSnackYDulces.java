@@ -33,7 +33,7 @@ public class DetalleSnackYDulces extends AppCompatActivity {
         }
     }
 
-    public void verPedido (View view){
+    public void verPedidoSnack (View v){
         Intent intentverPedido = new Intent(this, VerPedido.class);
         startActivity(intentverPedido);
     }

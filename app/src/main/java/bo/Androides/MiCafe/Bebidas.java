@@ -37,8 +37,8 @@ public class Bebidas extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent visorDetalles = new Intent(view.getContext(), DetallesBebidas.class);
                 Producto producto = productos.get(position);
-                visorDetalles.putExtra("TITULO", producto.getNombre());
-                visorDetalles.putExtra("DETALLE", producto.getDetalle());
+                visorDetalles.putExtra("TIT", producto.getNombre());
+                visorDetalles.putExtra("DET", producto.getDetalle());
                 startActivity(visorDetalles);
             }
         });

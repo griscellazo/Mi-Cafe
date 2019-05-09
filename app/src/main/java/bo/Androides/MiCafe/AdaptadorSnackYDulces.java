@@ -39,7 +39,7 @@ public class AdaptadorSnackYDulces extends BaseAdapter {
 
             viewHolder.nombre = (TextView) convertView.findViewById(R.id.NombreDeSnackYDulces);
             viewHolder.imagen = (ImageView) convertView.findViewById(R.id.imagen2);
-        //    viewHolder.precioSnack = (TextView) convertView.findViewById(R.id.precioSnack);
+            viewHolder.precioSnack = (TextView) convertView.findViewById(R.id.precioSnack);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -49,7 +49,7 @@ public class AdaptadorSnackYDulces extends BaseAdapter {
         Producto producto = this.items.get(i);
         viewHolder.nombre.setText(producto.getNombre());
         viewHolder.imagen.setImageResource(producto.getImagen());
-    //    viewHolder.precioSnack.setText((int) producto.getPrecio());
+        viewHolder.precioSnack.setText("Precio: "+ String.valueOf(producto.getPrecio()) + " Bs.");
         return convertView;
     }
 

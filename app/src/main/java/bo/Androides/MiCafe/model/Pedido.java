@@ -1,21 +1,29 @@
 package bo.Androides.MiCafe.model;
 
+
+
+import com.google.gson.annotations.Expose;
+
 public class Pedido {
 
+    @Expose
     private int id;
 
+    @Expose
     private String producto;
 
+    @Expose
     private double precio;
 
+    @Expose
     private int cantidad;
 
-
+/*
     public Pedido(String producto, double precio, int cantidad) {
         this.producto = producto;
         this.precio = precio;
         this.cantidad = cantidad;
-    }
+    }*/
 
     public int getId() {
         return id;

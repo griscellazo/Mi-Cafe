@@ -8,6 +8,19 @@ public class Constants {
     public static final String PREF_USUARIO = "usuario";
     public static final String PREF_PASSWORD = "password";
 
+
+
+    public static final String KEY_NOMBRE_PEDIDO = "nombrePedido";
+
+
+    public static final String PREF_PEDIDO = "pedido";
+    public static final String KEY_REGISTRAR_PEDIDO = "registrarPedido";
+
+
+
+
+
+
     public static final String KEY_REGISTRAR_USUARIO = "registrarUsuario";
 
     public static final String DATABASE_NAME = "micafe.db";
@@ -15,4 +28,7 @@ public class Constants {
 
 
     public static final int CODIGO_TRANSACCION = 410;
+
+
+
 }

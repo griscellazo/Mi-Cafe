@@ -135,7 +135,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
-    private void llenarUsuario (String usuario, String password){
+    private void llenarUsuario (String  usuario, String password){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString(Constants.PREF_USUARIO, usuario);

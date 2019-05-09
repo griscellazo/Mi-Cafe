@@ -67,7 +67,7 @@
             android:id="@+id/verPedido"
             android:layout_width="match_parent"
             android:layout_height="71dp"
-            android:onClick="verPedido"
+            android:onClick="verPedidoSnack"
             android:text="Ver mi pedido" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

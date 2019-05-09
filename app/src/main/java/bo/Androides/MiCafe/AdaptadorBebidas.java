@@ -18,12 +18,17 @@ public class AdaptadorBebidas extends BaseAdapter {
 
     private static LayoutInflater inflater = null;
 
+
+
+
+
     Context contexto;
     List<Producto> items = new ArrayList<>();
 
     public AdaptadorBebidas(Context contexto, List<Producto> productos) {
         this.contexto = contexto;
         this.items = productos;
+
         inflater = (LayoutInflater) contexto.getSystemService(contexto.LAYOUT_INFLATER_SERVICE);
     }
 
@@ -40,7 +45,7 @@ public class AdaptadorBebidas extends BaseAdapter {
 
             viewHolder.nombre = (TextView) convertView.findViewById(R.id.NombreDeBebida);
             viewHolder.imagen = (ImageView) convertView.findViewById(R.id.imagen);
-    //        viewHolder.precioBebidas =  (TextView) convertView.findViewById(R.id.precioBebidas);
+            viewHolder.precioBebidas =(TextView) convertView.findViewById(R.id.precioBebidas);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -49,7 +54,7 @@ public class AdaptadorBebidas extends BaseAdapter {
         Producto producto = this.items.get(i);
         viewHolder.nombre.setText(producto.getNombre());
         viewHolder.imagen.setImageResource(producto.getImagen());
-    //    viewHolder.precioBebidas.setText(producto.getPrecio());
+        viewHolder.precioBebidas.setText("Precio: "+ String.valueOf(producto.getPrecio()) + " Bs.");
         return convertView;
     }
 

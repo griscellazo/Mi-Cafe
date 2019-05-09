@@ -24,7 +24,7 @@ import bo.Androides.MiCafe.model.User;
             contentValues.put("usuario", user.getNombreUsuario());
             contentValues.put("password", user.getPassword());
             contentValues.put("email", user.getEmail());
-           //* contentValues.put("codigoUpb", user.getCodigoUpb());
+            contentValues.put("codigoUpb", user.getCodigoUpb());
             this.mDatabase.insert("usuarios",
                     null,
                     contentValues);
@@ -40,8 +40,6 @@ import bo.Androides.MiCafe.model.User;
                     " WHERE usuario=? AND password = ?", params);*/
 
             Cursor cursor = this.mDatabase.rawQuery("SELECT password FROM usuarios", null);
-
-
             if (cursor.moveToFirst()) {
                 Log.d("CodigoUPB", "" + cursor.getInt(0));
                 return true;
@@ -61,6 +59,31 @@ import bo.Androides.MiCafe.model.User;
             this.mDatabase.close();
         }
 
+
+
+
+
+        /*public boolean pedidoLogin(String nombrePedido) {
+            String[] params = new String[1];
+            params[0] = nombrePedido;
+
+
+            Cursor cursor = this.mDatabase.rawQuery("SELECT id, producto, precio, cantidad FROM pedidos", null);
+            if (cursor.moveToFirst()) {
+                Log.d("NombrePedido", "" + cursor.getInt(0));
+                return true;
+            } else {
+                return false;
+            }
+        }*/
+
+
+
+
+
+
+
+
         public List<Pedido> getPedidos(){
             List<Pedido> pedidos = new ArrayList<>();
 
@@ -72,6 +95,13 @@ import bo.Androides.MiCafe.model.User;
                     double precio = cursor.getDouble(2);
                     int cantidad = cursor.getInt(3);
 
+                    Pedido pedido = new Pedido();
+                    pedido.setId(id);
+                    pedido.setProducto(producto);
+                    pedido.setPrecio(precio);
+                    pedido.setCantidad(cantidad);
+
+                    pedidos.add(pedido);
                 }while (cursor.moveToNext());
             }
 
