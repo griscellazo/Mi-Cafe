@@ -17,12 +17,12 @@ public class DetallesPlatos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_platos);
 
-        opciones = (Spinner) findViewById(R.id.elegir2);
+        opciones = (Spinner) findViewById(R.id.elegirPlatos);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.opciones, android.R.layout.simple_spinner_item);
         opciones.setAdapter(adapter);
 
-        TextView titulo = (TextView) findViewById(R.id.titulodescripcion2);
-        TextView detalles = (TextView) findViewById(R.id.descripcion2);
+        TextView titulo = (TextView) findViewById(R.id.titulodescripcionSnack);
+        TextView detalles = (TextView) findViewById(R.id.descripcionPlatos);
 
         Intent intent = getIntent();
         Bundle b = ((Intent) intent).getExtras();

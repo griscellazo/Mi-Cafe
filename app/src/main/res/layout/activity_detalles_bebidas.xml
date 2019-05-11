@@ -7,7 +7,7 @@
     tools:context=".DetallesBebidas">
 
     <TextView
-        android:id="@+id/NombreDeBebida"
+        android:id="@+id/titulodescripcionBebidas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imagen"
+        android:id="@+id/imagenBebidas"
         android:layout_width="152dp"
         android:layout_height="120dp"
         android:layout_marginStart="128dp"
@@ -34,7 +34,7 @@
         app:srcCompat="@drawable/frutal_500ml" />
 
     <TextView
-        android:id="@+id/descripcion"
+        android:id="@+id/descripcionBebidas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -42,7 +42,7 @@
         tools:layout_editor_absoluteY="223dp" />
 
     <TextView
-        android:id="@+id/precio"
+        android:id="@+id/precioBebidas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -51,7 +51,7 @@
 
 
     <Spinner
-        android:id="@+id/elegir"
+        android:id="@+id/elegirBebidas"
         android:layout_width="215dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="276dp"
@@ -76,17 +76,17 @@
             android:layout_height="350dp" />
 
         <Button
-            android:id="@+id/anadirBebidas"
+            android:id="@+id/anadidoBebidas"
             android:layout_width="match_parent"
             android:layout_height="71dp"
             android:onClick="anadidoBebidas"
             android:text="Añadir a mi pedido" />
 
         <Button
-            android:id="@+id/verPedido"
+            android:id="@+id/verPedidoBebidas"
             android:layout_width="match_parent"
             android:layout_height="71dp"
-            android:onClick="verpedidoClick"
+            android:onClick="verpedidoBebidas"
             android:text="Ver mi pedido" />
 
     </LinearLayout>

@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,14 +40,16 @@ public class DetallesBebidas extends AppCompatActivity {
         this.mContext = this;
         dbHelper = new DatabaseHelper(this.mContext);
 
-        nombreProducto = findViewById(R.id.NombreDeBebida);
+        nombreProducto = findViewById(R.id.titulodescripcionBebidas);
 
-        opciones = (Spinner) findViewById(R.id.elegir);
+        opciones = (Spinner) findViewById(R.id.elegirBebidas);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.opciones, android.R.layout.simple_spinner_item);
         opciones.setAdapter(adapter);
 
-        TextView titulo = (TextView) findViewById(R.id.NombreDeBebida);
-        TextView detalles = (TextView) findViewById(R.id.descripcion);
+        TextView titulo = (TextView) findViewById(R.id.titulodescripcionBebidas);
+        TextView detalles = (TextView) findViewById(R.id.descripcionBebidas);
+        ImageView imagen = (ImageView) findViewById(R.id.imagenSnack);
+
 
         Intent intent = getIntent();
         Bundle b = ((Intent) intent).getExtras();
@@ -54,6 +57,9 @@ public class DetallesBebidas extends AppCompatActivity {
         if (b!=null){
             titulo.setText(b.getString("TIT"));
             detalles.setText(b.getString("DET"));
+            imagen.setImageResource(b.getInt("IMG"));
+
+
         }
     }
 
@@ -88,7 +94,7 @@ public class DetallesBebidas extends AppCompatActivity {
     }*/
 
 
-    public void verpedidoClick (View view){
+    public void verpedidoBebidas (View view){
 
         String nombrePedido = nombreProducto.getText().toString();
         Log.e("Mis datos", nombrePedido );

@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetallesBebidas">
+    tools:context=".DetalleSnackYDulces">
 
     <TextView
-        android:id="@+id/NombreDeBebida"
+        android:id="@+id/titulodescripcionSnack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imagen"
+        android:id="@+id/imagenSnack"
         android:layout_width="152dp"
         android:layout_height="120dp"
         android:layout_marginStart="128dp"
@@ -34,24 +34,22 @@
         app:srcCompat="@drawable/lays" />
 
     <TextView
-        android:id="@+id/descripcion"
+        android:id="@+id/descripcionSnack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
         tools:layout_editor_absoluteX="176dp"
         tools:layout_editor_absoluteY="223dp" />
 
     <TextView
-        android:id="@+id/precio"
+        android:id="@+id/precioSnack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
         tools:layout_editor_absoluteX="176dp"
         tools:layout_editor_absoluteY="189dp" />
 
 
     <Spinner
-        android:id="@+id/elegir"
+        android:id="@+id/elegirSnack"
         android:layout_width="215dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="276dp"
@@ -76,17 +74,17 @@
             android:layout_height="350dp" />
 
         <Button
-            android:id="@+id/anadirBebidas"
+            android:id="@+id/anadidoSnack"
             android:layout_width="match_parent"
             android:layout_height="71dp"
-            android:onClick="anadidoBebidas"
+            android:onClick="anadidoSnack"
             android:text="Añadir a mi pedido" />
 
         <Button
             android:id="@+id/verPedido"
             android:layout_width="match_parent"
             android:layout_height="71dp"
-            android:onClick="verpedidoClick"
+            android:onClick="verPedidoSnack"
             android:text="Ver mi pedido" />
 
     </LinearLayout>

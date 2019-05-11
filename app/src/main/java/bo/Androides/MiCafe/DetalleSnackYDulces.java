@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,18 +39,21 @@ public class DetalleSnackYDulces extends AppCompatActivity {
 
         nombreProductoSnack = findViewById(R.id.NombreDeSnackYDulces);
 
-        opciones = (Spinner) findViewById(R.id.elegir3);
+        opciones = (Spinner) findViewById(R.id.elegirSnack);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.opciones, android.R.layout.simple_spinner_item);
         opciones.setAdapter(adapter);
 
-        TextView titulo = (TextView) findViewById(R.id.titulodescripcion3);
-        TextView detalles = (TextView) findViewById(R.id.descripcion3);
+        TextView titulo = (TextView) findViewById(R.id.titulodescripcionSnack);
+        TextView detalles = (TextView) findViewById(R.id.descripcionSnack);
+
+        ImageView imagen = (ImageView) findViewById(R.id.imagenSnack);
 
         Intent intent = getIntent();
         Bundle b = ((Intent) intent).getExtras();
         if (b != null) {
             titulo.setText(b.getString("TIT"));
             detalles.setText(b.getString("DET"));
+            imagen.setImageResource(b.getInt("IMG"));
         }
     }
 
