@@ -17,8 +17,11 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 
+import org.w3c.dom.Text;
+
 import bo.Androides.MiCafe.db.DatabaseHelper;
 import bo.Androides.MiCafe.model.Pedido;
+import bo.Androides.MiCafe.model.Producto;
 import bo.Androides.MiCafe.model.User;
 
 public class DetallesBebidas extends AppCompatActivity {
@@ -29,9 +32,10 @@ public class DetallesBebidas extends AppCompatActivity {
     private DatabaseHelper dbHelper;
 
     private TextView nombreProducto;
+    private Double precioProducto;
+
     private double precio;
     private int cantidad;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,25 +45,29 @@ public class DetallesBebidas extends AppCompatActivity {
         dbHelper = new DatabaseHelper(this.mContext);
 
         nombreProducto = findViewById(R.id.titulodescripcionBebidas);
+       // precioProducto
 
         opciones = (Spinner) findViewById(R.id.elegirBebidas);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.opciones, android.R.layout.simple_spinner_item);
         opciones.setAdapter(adapter);
 
-        TextView titulo = (TextView) findViewById(R.id.titulodescripcionBebidas);
-        TextView detalles = (TextView) findViewById(R.id.descripcionBebidas);
-        ImageView imagen = (ImageView) findViewById(R.id.imagenSnack);
+        // id = (TextView) findViewById(R.id.idBebidas) ;
+        TextView nombre = (TextView) findViewById(R.id.titulodescripcionBebidas);
+        TextView detalle = (TextView) findViewById(R.id.descripcionBebidas);
+        TextView precio = (TextView) findViewById(R.id.precioBebidas);
+        ImageView imagen = (ImageView) findViewById(R.id.imagenBebidas);
 
 
         Intent intent = getIntent();
         Bundle b = ((Intent) intent).getExtras();
 
         if (b!=null){
-            titulo.setText(b.getString("TIT"));
-            detalles.setText(b.getString("DET"));
+         //   Producto producto = new Producto(id, nombre, detalle, precio, imagen);
+            nombre.setText(b.getString("TIT"));
+            detalle.setText(b.getString("DET"));
+          //  precio.setText(String.valueOf(producto.getPrecio()));
+
             imagen.setImageResource(b.getInt("IMG"));
-
-
         }
     }
 
@@ -70,6 +78,7 @@ public class DetallesBebidas extends AppCompatActivity {
 
         Pedido carrito = new Pedido();
         carrito.setProducto(nombreProducto.getText().toString());
+    //    carrito.setProducto(precioProducto.getText().toString());
         /*
         carrito.setPrecio(precio);
         carrito.setCantidad(cantidad);
@@ -79,6 +88,7 @@ public class DetallesBebidas extends AppCompatActivity {
         String json = new Gson().toJson(carrito);
         Log.e("Pedido enviado", json);
 
+     //   llenarPedido(nombreProducto.getText().toString(),precioProducto.getText().toString());
         llenarPedido(nombreProducto.getText().toString());
 
         Intent intent = new Intent();
@@ -87,11 +97,7 @@ public class DetallesBebidas extends AppCompatActivity {
         finish();
     }
 
-    /*
-    public void prueba (View view){
-        Intent intent2 = new Intent(mContext, PlatosALaCarta.class);
-        startActivity(intent2);
-    }*/
+
 
 
     public void verpedidoBebidas (View view){
@@ -110,8 +116,7 @@ public class DetallesBebidas extends AppCompatActivity {
             intent3.putExtra(Constants.KEY_NOMBRE_PEDIDO, nombrePedido);
             startActivity(intent3);
         } else {
-            Toast.makeText(mContext, "Pedido incorrecto", Toast.LENGTH_SHORT)
-                    .show();
+            Toast.makeText(mContext, "Pedido incorrecto", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -119,6 +124,7 @@ public class DetallesBebidas extends AppCompatActivity {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString(Constants.PREF_PEDIDO, nombrePedido);
+       // editor.putString(Constants.PREF_PRECIO, precioBebida);
         editor.apply();
     }
 

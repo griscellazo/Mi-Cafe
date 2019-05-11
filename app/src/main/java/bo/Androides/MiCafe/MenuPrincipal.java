@@ -50,6 +50,9 @@ public class MenuPrincipal extends AppCompatActivity {
     public void bebidasClick (View view){
         Intent intent = new Intent(this, Bebidas.class);
         startActivity(intent);
+        /*
+        Bebidas bebidas = new Bebidas();
+        bebidas.llenar*/
     }
 
     public void platosALaCartaClick (View view){

@@ -52,6 +52,7 @@ public class Producto {
         this.detalle = detalle;
     }
 
+
     public double getPrecio() {
         return precio;
     }

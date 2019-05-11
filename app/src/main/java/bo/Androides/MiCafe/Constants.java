@@ -14,6 +14,7 @@ public class Constants {
 
 
     public static final String PREF_PEDIDO = "pedido";
+    public static final String PREF_PRECIO = "precio";
     public static final String KEY_REGISTRAR_PEDIDO = "registrarPedido";
 
 

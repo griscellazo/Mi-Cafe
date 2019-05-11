@@ -29,6 +29,7 @@ public class Bebidas extends AppCompatActivity {
         lista = (ListView) findViewById(R.id.Lista1);
 
         llenarProductos();
+
         lista.setAdapter(new AdaptadorBebidas(this, productos));
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -38,6 +39,7 @@ public class Bebidas extends AppCompatActivity {
                 Producto producto = productos.get(position);
                 visorDetalles.putExtra("TIT", producto.getNombre());
                 visorDetalles.putExtra("DET", producto.getDetalle());
+                visorDetalles.putExtra("PRECIO",producto.getPrecio());
                 startActivity(visorDetalles);
             }
         });

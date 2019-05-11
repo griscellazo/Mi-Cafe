@@ -13,7 +13,7 @@ public class ElementoListaSnackYDulces extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elemento_lista_snack_ydulces);
-        opciones = (Spinner) findViewById(R.id.elegir);
+        opciones = (Spinner) findViewById(R.id.elegirSnack);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.opciones, android.R.layout.simple_spinner_item);
         opciones.setAdapter(adapter);

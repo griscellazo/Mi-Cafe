@@ -27,6 +27,8 @@ public class AdaptadorSnackYDulces extends BaseAdapter {
         inflater = (LayoutInflater) contexto.getSystemService(contexto.LAYOUT_INFLATER_SERVICE);
     }
 
+    //comentario
+
     @Override
     public View getView(int i, View convertView, ViewGroup parent) {
 
