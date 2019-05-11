@@ -2,16 +2,16 @@
 <resources>
     <string-array name = "opciones">
         <item>Cantidad</item>
-        <item>1 producto </item>
-        <item>2 productos</item>
-        <item>3 productos</item>
-        <item>4 productos</item>
-        <item>5 productos</item>
-        <item>6 productos</item>
-        <item>7 productos</item>
-        <item>8 productos</item>
-        <item>9 productos</item>
-        <item>10 productos</item>
+        <item>1  </item>
+        <item>2 </item>
+        <item>3 </item>
+        <item>4 </item>
+        <item>5 </item>
+        <item>6 </item>
+        <item>7 </item>
+        <item>8 </item>
+        <item>9 </item>
+        <item>10 </item>
 
 
 

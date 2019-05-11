@@ -35,13 +35,12 @@ import bo.Androides.MiCafe.model.User;
             String[] params = new String[2];
             params[0] = usuario;
             params[1] = password;
-            /*
-            Cursor cursor = this.mDatabase.rawQuery("SELECT codigoUpb FROM usuarios" +
-                    " WHERE usuario=? AND password = ?", params);*/
 
-            Cursor cursor = this.mDatabase.rawQuery("SELECT password FROM usuarios", null);
+
+            Cursor cursor = this.mDatabase.rawQuery("SELECT email FROM usuarios" + " WHERE usuarios=? AND  password=?",params);
+
             if (cursor.moveToFirst()) {
-                Log.d("CodigoUPB", "" + cursor.getInt(0));
+                Log.d("email", "" + cursor.getInt(0));
                 return true;
             } else {
                 return false;

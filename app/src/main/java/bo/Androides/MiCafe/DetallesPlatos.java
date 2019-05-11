@@ -38,7 +38,7 @@ public class DetallesPlatos extends AppCompatActivity {
         startActivity(intentPlatos);
     }
 
-    public void anadido (View view){
+    public void anadidoPlatos (View view){
         Toast.makeText(this, "Añadido a su lista de pedidos", Toast.LENGTH_SHORT).show();
     }
 

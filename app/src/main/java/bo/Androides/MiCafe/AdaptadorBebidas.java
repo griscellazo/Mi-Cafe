@@ -18,10 +18,6 @@ public class AdaptadorBebidas extends BaseAdapter {
 
     private static LayoutInflater inflater = null;
 
-
-
-
-
     Context contexto;
     List<Producto> items = new ArrayList<>();
 

@@ -40,6 +40,7 @@ public class DetallesBebidas extends AppCompatActivity {
         dbHelper = new DatabaseHelper(this.mContext);
 
         nombreProducto = findViewById(R.id.NombreDeBebida);
+
         opciones = (Spinner) findViewById(R.id.elegir);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.opciones, android.R.layout.simple_spinner_item);
         opciones.setAdapter(adapter);
@@ -58,7 +59,7 @@ public class DetallesBebidas extends AppCompatActivity {
 
 
 
-    public void anadido (View view){
+    public void anadidoBebidas (View view){
         Toast.makeText(this, "Añadido a su lista de pedidos", Toast.LENGTH_SHORT).show();
 
         Pedido carrito = new Pedido();

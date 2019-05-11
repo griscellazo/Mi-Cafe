@@ -18,20 +18,6 @@ public class SnackYDulces extends AppCompatActivity {
 
     List<Producto> productos = new ArrayList<>();
 
-    String[][] datos = {
-            {"Club Social ", "Deliciosa y crujientes galletas "},
-            {"Doritos", "Deliciosos y crujientes chips de distintos sabores "},
-            {"Alexander Cookie", "Deliciosa galleta, de la mejor cafeteria de La Paz "},
-            {"Lays ", "Es una sabrosa gaseosa para compartir en familia."},
-            {"Oreo", "Deliciosa galleta con relleno blanco"},
-
-
-    };
-
-    int [] datosImg = {R.drawable.club_social, R.drawable.doritos, R.drawable.galletas_alexander, R.drawable.lays,R.drawable.oreo};
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

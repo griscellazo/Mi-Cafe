@@ -21,7 +21,6 @@ public class Bebidas extends AppCompatActivity {
     List<Producto> productos = new ArrayList<>();
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
