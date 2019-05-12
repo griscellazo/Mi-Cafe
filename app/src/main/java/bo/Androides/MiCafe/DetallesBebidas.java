@@ -45,6 +45,4 @@ public class DetallesBebidas extends AppCompatActivity {
         Toast.makeText(this, "Añadido a su lista de pedidos", Toast.LENGTH_SHORT).show();
     }
 
-
-
 }

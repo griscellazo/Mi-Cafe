@@ -25,6 +25,7 @@ import bo.Androides.MiCafe.model.User;
             contentValues.put("usuario", user.getNombreUsuario());
             contentValues.put("password", user.getPassword());
             contentValues.put("email", user.getEmail());
+            contentValues.put("codigoUpb",user.getCodigoUpb());
             this.mDatabase.insert("usuarios",
                     null,
                     contentValues);
@@ -93,7 +94,7 @@ import bo.Androides.MiCafe.model.User;
         public void limpiarCarrito(){
             this.mDatabase.delete("pedidos","",null);
             this.mDatabase.close();
-        }*/
+        }
 
 
     }
