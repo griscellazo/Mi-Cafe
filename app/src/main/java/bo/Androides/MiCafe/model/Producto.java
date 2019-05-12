@@ -28,6 +28,8 @@ public class Producto {
         this.imagen = imagen;
     }
 
+
+
     public int getId() {
         return id;
     }

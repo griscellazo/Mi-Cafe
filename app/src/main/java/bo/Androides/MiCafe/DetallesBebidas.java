@@ -20,6 +20,9 @@ import com.google.gson.Gson;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import bo.Androides.MiCafe.db.DatabaseHelper;
 import bo.Androides.MiCafe.model.Pedido;
 import bo.Androides.MiCafe.model.Producto;
@@ -37,6 +40,8 @@ public class DetallesBebidas extends AppCompatActivity {
 
     private double precio;
     private int cantidad;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,13 +68,14 @@ public class DetallesBebidas extends AppCompatActivity {
         Bundle b = ((Intent) intent).getExtras();
 
         if (b!=null){
-         //   Producto producto = new Producto(id, nombre, detalle, precio, imagen);
-            nombre.setText(b.getString("TIT"));
-            detalle.setText(b.getString("DET"));
-          //  precio.setText(String.valueOf(producto.getPrecio()));
 
-            imagen.setImageResource(b.getInt("IMG"));
+            //Producto producto = new Producto(id, nombre, detalle, precio, imagen);
+            nombre.setText(b.getString("TITULO"));
+            detalle.setText(b.getString("DETALLE"));
+            precio.setText(b.getString("PRECIO"));
+         //   imagen.setImageResource();
         }
+        //
     }
 
 

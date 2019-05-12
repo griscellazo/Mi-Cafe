@@ -36,7 +36,7 @@ public class Bebidas extends AppCompatActivity {
         setContentView(R.layout.activity_bebidas);
 
         lista = (ListView) findViewById(R.id.Lista1);
-        nombreProducto = findViewById(R.id.nombreProducto);
+       // nombreProducto = findViewById(R.id.nombreProducto);
 
         llenarProductos();
 
@@ -47,9 +47,10 @@ public class Bebidas extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent visorDetalles = new Intent(view.getContext(), DetallesBebidas.class);
                 Producto producto = productos.get(position);
-                visorDetalles.putExtra("TIT", producto.getNombre());
-                visorDetalles.putExtra("DET", producto.getDetalle());
+                visorDetalles.putExtra("TITULO", producto.getNombre());
+                visorDetalles.putExtra("DETALL", producto.getDetalle());
                 visorDetalles.putExtra("PRECIO",producto.getPrecio());
+               // visorDetalles.putExtra("IMAGEN",producto.getImagen());
             //    startActivity(visorDetalles);
                 startActivityForResult(visorDetalles, Constants.CODIGO_TRANSACCION_PRODUCTO);
 
@@ -67,7 +68,7 @@ public class Bebidas extends AppCompatActivity {
                     Log.e("Pedido Recibido", json);
 
                     Producto producto = new Gson().fromJson(json,Producto.class);
-                    nombreProducto.setText(producto.getNombre());
+                 //   nombreProducto.setText(producto.getNombre());
                     /*
                     User usuarioRecibido = new Gson().fromJson(json, User.class);
                     nombreProducto.setText(usuarioRecibido.getNombreUsuario());*/

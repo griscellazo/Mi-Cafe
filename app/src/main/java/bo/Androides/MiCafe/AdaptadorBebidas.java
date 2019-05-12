@@ -35,9 +35,9 @@ public class AdaptadorBebidas extends BaseAdapter {
         if (convertView == null) {
             viewHolder = new ViewHolder();
 
-            //Inflater nos permite usar un layout dentro de un componente
+
             LayoutInflater inflater = (LayoutInflater) contexto.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.activity_elemento_lista, null); //Cual layout y principal o no.
+            convertView = inflater.inflate(R.layout.activity_elemento_lista, null);
 
             viewHolder.nombre = (TextView) convertView.findViewById(R.id.NombreDeBebida);
             viewHolder.imagen = (ImageView) convertView.findViewById(R.id.imagen);
