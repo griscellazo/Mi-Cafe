@@ -30,7 +30,7 @@ public class PlatosALaCarta extends AppCompatActivity {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent visorDetalles = new Intent(view.getContext(), DetallesBebidas.class);
+                Intent visorDetalles = new Intent(view.getContext(), DetallesPlatos.class);
                 Producto producto = productos.get(position);
                 visorDetalles.putExtra("TIT", producto.getNombre());
                 visorDetalles.putExtra("DET", producto.getDetalle());

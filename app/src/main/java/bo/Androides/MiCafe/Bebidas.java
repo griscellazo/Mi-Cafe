@@ -48,7 +48,7 @@ public class Bebidas extends AppCompatActivity {
                 Intent visorDetalles = new Intent(view.getContext(), DetallesBebidas.class);
                 Producto producto = productos.get(position);
                 visorDetalles.putExtra("TITULO", producto.getNombre());
-                visorDetalles.putExtra("DETALL", producto.getDetalle());
+                visorDetalles.putExtra("DETALLE", producto.getDetalle());
                 visorDetalles.putExtra("PRECIO",producto.getPrecio());
                // visorDetalles.putExtra("IMAGEN",producto.getImagen());
             //    startActivity(visorDetalles);

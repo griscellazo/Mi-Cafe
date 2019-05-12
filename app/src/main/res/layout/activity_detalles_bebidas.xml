@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_azul_fondo"
     tools:context=".DetallesBebidas">
 
     <TextView
@@ -12,11 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="HOLA"
-        android:textSize="18sp"
+        android:text="TextView"
+        android:textSize="20sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,7 +31,6 @@
         android:layout_marginStart="128dp"
         android:layout_marginLeft="128dp"
         android:layout_marginTop="56dp"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/frutal_500ml" />
@@ -38,9 +40,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="200dp"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
@@ -52,9 +55,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PRECIO"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="250dp"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
@@ -76,15 +80,13 @@
     </Spinner>
 
 
-
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="72dp">
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
             android:layout_width="100dp"
@@ -94,15 +96,20 @@
             android:id="@+id/anadidoBebidas"
             android:layout_width="match_parent"
             android:layout_height="71dp"
+            android:background="@color/color_cafe_botones"
             android:onClick="anadidoBebidas"
-            android:text="Añadir a mi pedido" />
+            android:text="Añadir a mi pedido"
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/verPedidoBebidas"
             android:layout_width="match_parent"
             android:layout_height="71dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/color_cafe_botones"
             android:onClick="verpedidoBebidas"
-            android:text="Ver mi pedido" />
+            android:text="Ver mi pedido"
+            android:textColor="@color/white"/>
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

@@ -5,60 +5,68 @@
     android:id="@+id/botonesLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondopantallas"
+    android:layout_marginTop="0dp"
+    android:background="@color/color_azul_fondo"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="20dp">
 
     <TextView
-        android:layout_width="70dp"
-        android:layout_height="30dp"
-        android:background="@color/Rosado"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_azul_claro"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:text="NOMBRE:"
-        android:textColor="@color/white"
-        android:textColorHighlight="@color/colorPrimary" />
+        android:textColor="@color/white" />
 
     <EditText
         android:id="@+id/etRegNombre"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/colorAccent" />
+        android:background="@color/white" />
 
     <TextView
-        android:layout_width="125dp"
-        android:layout_height="30dp"
-        android:background="@color/Rosado"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_azul_claro"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:text="CONTRASEÑA:"
         android:textColor="@color/white" />
 
     <EditText
         android:id="@+id/etContraseña"
         android:layout_width="match_parent"
-        android:layout_height="41dp"
+        android:layout_height="40dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/colorAccent"
+        android:background="@color/white"
         android:inputType="textPassword" />
 
     <TextView
-        android:layout_width="92dp"
-        android:layout_height="32dp"
-        android:background="@color/Rosado"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_azul_claro"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:text="CORREO:"
         android:textColor="@color/white" />
 
     <EditText
         android:id="@+id/etCorreo"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="40dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/colorAccent" />
+        android:background="@color/white" />
 
     <Button
+        android:layout_marginTop="5dp"
         android:id="@+id/btnRegistrarse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:text="Guardar datos"
+        android:background="@color/color_cafe_botones"
+        android:text="GUARDAR DATOS"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/white" />
 
 </LinearLayout>

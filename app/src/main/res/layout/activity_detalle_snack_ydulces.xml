@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_azul_fondo"
     tools:context=".DetalleSnackYDulces">
 
     <TextView
@@ -13,11 +14,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="TextView"
-        android:textSize="18sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,8 +29,8 @@
         android:id="@+id/imagenSnack"
         android:layout_width="152dp"
         android:layout_height="120dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginLeft="128dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
         android:layout_marginTop="56dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -38,9 +41,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="200dp"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="176dp"
@@ -51,9 +55,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:layout_marginStart="150dp"
-        android:layout_marginLeft="150dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="230dp"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="176dp"
@@ -79,7 +84,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="72dp">
+        tools:layout_editor_absoluteY="47dp"
+        android:padding="20dp">
 
         <TextView
             android:layout_width="100dp"
@@ -90,13 +96,20 @@
             android:layout_width="match_parent"
             android:layout_height="71dp"
             android:onClick="anadidoSnack"
+            android:textColor="@color/white"
+            android:background="@color/color_cafe_botones"
+            android:textSize="18dp"
             android:text="Añadir a mi pedido" />
 
         <Button
             android:id="@+id/verPedido"
             android:layout_width="match_parent"
             android:layout_height="71dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
             android:onClick="verPedidoSnack"
+            android:background="@color/color_cafe_botones"
+            android:textSize="18dp"
             android:text="Ver mi pedido" />
 
     </LinearLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_azul_fondo"
     tools:context=".DetallesPlatos">
 
     <TextView
@@ -12,11 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-
-        android:textSize="18sp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,22 +41,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="200dp"
+        android:textSize="18dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="223dp" />
+        />
 
     <TextView
         android:id="@+id/precioPlatos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="240dp"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="176dp"
@@ -64,7 +70,7 @@
         android:id="@+id/elegirPlatos"
         android:layout_width="215dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="276dp"
+        android:layout_marginTop="280dp"
         android:layout_marginEnd="88dp"
         android:layout_marginRight="88dp"
         android:textSize="16sp"
@@ -86,9 +92,11 @@
             android:layout_height="350dp" />
 
         <Button
-            android:id="@+id/anadirBebidas"
+            android:id="@+id/anadidoPedido"
             android:layout_width="match_parent"
             android:layout_height="71dp"
+            android:textColor="@color/white"
+            android:background="@color/color_cafe_botones"
             android:onClick="anadidoPlatos"
             android:text="Añadir a mi pedido" />
 
@@ -96,6 +104,9 @@
             android:id="@+id/verPedido"
             android:layout_width="match_parent"
             android:layout_height="71dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:background="@color/color_cafe_botones"
             android:onClick="verPedidoPlatos"
             android:text="Ver mi pedido" />
 

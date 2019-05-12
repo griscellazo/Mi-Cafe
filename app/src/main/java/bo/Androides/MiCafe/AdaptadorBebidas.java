@@ -75,5 +75,4 @@ public class AdaptadorBebidas extends BaseAdapter {
         return this.items.get(position).getId();
     }
 
-
 }
