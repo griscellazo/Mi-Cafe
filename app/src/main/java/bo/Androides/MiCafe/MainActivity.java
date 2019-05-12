@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity  {
 
     private User mUser;
 
-
     private EditText mUsuarioEditText;
     private EditText mPasswordEditText;
 
@@ -97,7 +96,7 @@ public class MainActivity extends AppCompatActivity  {
 
     public void registrarClick(View view) {
         Intent intent = new Intent(this, RegisterActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent, Constants.CODIGO_TRANSACCION);
     }
 
     public void iniciarSesionClick (View view){
@@ -134,7 +133,6 @@ public class MainActivity extends AppCompatActivity  {
         }
     }
 
-
     private boolean validarUsuario(String usuario, String password){
         if (usuario == null || usuario.isEmpty()){
             return false;
@@ -142,10 +140,8 @@ public class MainActivity extends AppCompatActivity  {
         if (password == null || usuario.isEmpty()){
             return false;
         }
-
         DatabaseHelper dbHelper = new DatabaseHelper(this.mContext);
         return dbHelper.login(usuario, password);
-
     }
 
     public void eliminarDatos(View view) {

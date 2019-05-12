@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -16,16 +17,18 @@ import java.util.List;
 
 import bo.Androides.MiCafe.db.DatabaseHelper;
 import bo.Androides.MiCafe.model.Pedido;
+import bo.Androides.MiCafe.model.Producto;
 
 public class VerPedido extends AppCompatActivity {
 
     private Context context;
     private DatabaseHelper dbHelper;
     private List<Pedido> items = new ArrayList<>();
+    private String nombreProducto;
 
     ListView lista;
 
-
+    List<Producto> verpedido = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +39,12 @@ public class VerPedido extends AppCompatActivity {
         items = dbHelper.getPedidos();
         double total = getTotal();
 
+        lista = (ListView) findViewById(R.id.ListaVerPedido);
 
-        Toast.makeText(this, "FUNCIONA! y el total es:"+total, Toast.LENGTH_SHORT).show();
+
+
+        Toast.makeText(this, "FUNCIONA! y el total es:" + total, Toast.LENGTH_SHORT).show();
+
 
 
     }
@@ -49,4 +56,9 @@ public class VerPedido extends AppCompatActivity {
         }
         return total;
     }
+
+
+
+
+
 }

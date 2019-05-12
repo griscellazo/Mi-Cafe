@@ -29,6 +29,7 @@ public class Constants {
 
 
     public static final int CODIGO_TRANSACCION = 410;
+    public static final int CODIGO_TRANSACCION_PRODUCTO = 411;
 
 
 

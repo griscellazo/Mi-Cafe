@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -83,12 +84,13 @@ public class DetallesBebidas extends AppCompatActivity {
         carrito.setPrecio(precio);
         carrito.setCantidad(cantidad);
         */
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
         dbHelper.agregarAlCarrito(carrito);
 
         String json = new Gson().toJson(carrito);
         Log.e("Pedido enviado", json);
 
-     //   llenarPedido(nombreProducto.getText().toString(),precioProducto.getText().toString());
+    //    llenarPedido(nombreProducto.getText().toString(),precioProducto.getText().toString());
         llenarPedido(nombreProducto.getText().toString());
 
         Intent intent = new Intent();
@@ -105,21 +107,36 @@ public class DetallesBebidas extends AppCompatActivity {
         String nombrePedido = nombreProducto.getText().toString();
         Log.e("Mis datos", nombrePedido );
 
-        Toast.makeText(mContext, "Pedido incorrecto", Toast.LENGTH_SHORT)
-                .show();
-        /*
-        Intent intent9 = new Intent (this,VerPedido.class);
-        startActivity(intent9);*/
 
         if (validarPedido(nombrePedido)){
             Intent intent3 = new Intent(this, VerPedido.class);
-            intent3.putExtra(Constants.KEY_NOMBRE_PEDIDO, nombrePedido);
+        //    intent3.putExtra(Constants.KEY_NOMBRE_PEDIDO, nombrePedido);
             startActivity(intent3);
+         //   startActivityForResult(intent3, Constants.CODIGO_TRANSACCION_PRODUCTO);
         } else {
             Toast.makeText(mContext, "Pedido incorrecto", Toast.LENGTH_SHORT).show();
         }
     }
 
+/*
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == Constants.CODIGO_TRANSACCION) {
+            //Objeto usuario
+            if (resultCode == RESULT_OK) {
+                if (data != null) {
+                    String json = data.getStringExtra(Constants.KEY_REGISTRAR_PEDIDO);
+                    Log.e("Pedido Recibido", json);
+
+                    User usuarioRecibido = new Gson().fromJson(json, User.class);
+                    nombreProducto.setText(usuarioRecibido.getNombreUsuario());
+                    //mPasswordEditText.setText(usuarioRecibido.getPassword());
+                }
+            }
+        }
+    }
+*/
     private void llenarPedido (String nombrePedido){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = prefs.edit();

@@ -10,6 +10,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,7 +55,7 @@ public class RegisterActivity extends AppCompatActivity {
                 validateForm(view);
             }
         });
-        getDataFromIntent();
+
     }
 
     private void validateForm(View v){
@@ -118,6 +119,7 @@ public class RegisterActivity extends AppCompatActivity {
         intent.putExtra(Constants.KEY_REGISTRAR_USUARIO, json);
         setResult(RESULT_OK, intent);
         finish();
+       // getDataFromIntent();
 
 
     }

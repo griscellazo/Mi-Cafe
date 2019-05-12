@@ -75,18 +75,7 @@
 
     </Spinner>
 
-    <TextView
-        android:id="@+id/idBebidas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Textview"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="250dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="189dp" />
+
 
 
     <LinearLayout

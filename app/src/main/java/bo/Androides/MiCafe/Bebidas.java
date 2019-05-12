@@ -1,24 +1,33 @@
 package bo.Androides.MiCafe;
 
 import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
+
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import bo.Androides.MiCafe.model.Producto;
+import bo.Androides.MiCafe.model.User;
 
 public class Bebidas extends AppCompatActivity {
 
     ListView lista;
 
     List<Producto> productos = new ArrayList<>();
+
+//    private String nombreProducto1 = "HOLA GRIS";
+    private TextView nombreProducto;
 
 
     @Override
@@ -27,6 +36,7 @@ public class Bebidas extends AppCompatActivity {
         setContentView(R.layout.activity_bebidas);
 
         lista = (ListView) findViewById(R.id.Lista1);
+        nombreProducto = findViewById(R.id.nombreProducto);
 
         llenarProductos();
 
@@ -40,10 +50,33 @@ public class Bebidas extends AppCompatActivity {
                 visorDetalles.putExtra("TIT", producto.getNombre());
                 visorDetalles.putExtra("DET", producto.getDetalle());
                 visorDetalles.putExtra("PRECIO",producto.getPrecio());
-                startActivity(visorDetalles);
+            //    startActivity(visorDetalles);
+                startActivityForResult(visorDetalles, Constants.CODIGO_TRANSACCION_PRODUCTO);
+
             }
         });
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == Constants.CODIGO_TRANSACCION_PRODUCTO) {
+            if (resultCode == RESULT_OK) {
+                if (data != null) {
+                    String json = data.getStringExtra(Constants.KEY_REGISTRAR_PEDIDO);
+                    Log.e("Pedido Recibido", json);
+
+                    Producto producto = new Gson().fromJson(json,Producto.class);
+                    nombreProducto.setText(producto.getNombre());
+                    /*
+                    User usuarioRecibido = new Gson().fromJson(json, User.class);
+                    nombreProducto.setText(usuarioRecibido.getNombreUsuario());*/
+                }
+            }
+        }
+    }
+
+
 
     private void llenarProductos() {
         productos.add(new Producto(1,
