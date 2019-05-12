@@ -8,45 +8,60 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/color_azul_fondo"
         android:orientation="vertical">
 
+
         <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="200dp"
-            android:src="@drawable/navheader"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/cafe"
             android:scaleType="centerCrop" />
         <Button
             android:id="@+id/button_inicio"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+            android:layout_marginTop="25dp"
             android:background="?attr/selectableItemBackground"
-            android:text="@string/imagenavview" />
+            android:text="@string/imagenavview"
+            android:textSize="22dp"
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/button_perfil"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="?attr/selectableItemBackground"
-            android:text="@string/perfil" />
+            android:text="@string/perfil"
+            android:textSize="22dp"
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/button_favoritos"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="?attr/selectableItemBackground"
-            android:text="@string/favoritos" />
+            android:text="@string/favoritos"
+            android:textSize="22dp"
+            android:textColor="@color/white"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="?attr/selectableItemBackground"
-            android:text="@string/soporte" />
+            android:text="@string/soporte"
+            android:textSize="22dp"
+            android:textColor="@color/white"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="?attr/selectableItemBackground"
-            android:text="@string/compartir" />
+            android:text="@string/compartir"
+            android:textColor="@color/white"
+            android:textSize="22dp"/>
 
     </LinearLayout>
 
