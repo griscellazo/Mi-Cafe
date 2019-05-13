@@ -47,6 +47,9 @@ public class DeseaAnadirAlgoMas extends AppCompatActivity {
         SharedPreferences.Editor editor = prefs.edit();
         editor.clear();
         editor.apply();
+        Intent intentcancelado = new Intent (this, MenuPrincipal.class);
+        startActivity(intentcancelado);
+
     }
 
 }

@@ -6,6 +6,7 @@ import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -25,12 +26,15 @@ public class ReservarPedido extends AppCompatActivity {
     }
 
 
-
     public void DescripcionDeTuPedido (){
         int numero = (int) (Math.random() * 30) + 1;
         TextView texto = (TextView)findViewById(R.id.DescripcionDeTuPedido);
         String miTexto = ("Su pedido estará en breve, por favor espere en la mesa: " + numero);
         texto.setText(miTexto);
+    }
+
+    public void enviar(View view){
+        Toast.makeText(this, "Pedido enviado", Toast.LENGTH_SHORT).show();
     }
 
 }
