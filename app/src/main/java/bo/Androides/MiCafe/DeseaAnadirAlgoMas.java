@@ -10,7 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class DeseaAñadirAlgoMas extends AppCompatActivity {
+public class DeseaAnadirAlgoMas extends AppCompatActivity {
 
     private Toolbar toolbar;
     private ActionBarDrawerToggle drawerToggle;

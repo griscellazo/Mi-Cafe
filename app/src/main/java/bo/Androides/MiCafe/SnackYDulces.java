@@ -96,5 +96,20 @@ public class SnackYDulces extends AppCompatActivity {
                 "Deliciosa galleta de chocolate con relleno sabor leche",
                 2,
                 R.drawable.oreo)));
+        productos.add((new Producto(6,
+                "Sandwich de jamon y queso",
+                "Delicioso pan marraqueta con jamon y queso",
+                6,
+                R.drawable.jamon_y_queso)));
+        productos.add((new Producto(7,
+                "Sandwich de palta",
+                "Delicioso pan marraqueta con palta y tomate",
+                5,
+                R.drawable.palta)));
+        productos.add((new Producto(8,
+                "Croissant",
+                "Delicioso croissant relleno de jamon y queso",
+                6,
+                R.drawable.croissant)));
     }
 }
