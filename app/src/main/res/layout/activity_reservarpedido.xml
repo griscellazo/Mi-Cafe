@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_azul_fondo">
+    android:background="@color/color_azul_fondo"
+    tools:context="bo.Androides.MiCafe.ReservarPedido">
 
 
 
@@ -63,13 +64,25 @@
                 android:text="Descripcion de tu pedido:"/>
 
             <TextView
-                android:id="@+id/textViewDescripcionDeTuPedido"
+                android:id="@+id/DescripcionDeTuPedido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/color_azul_fondo"
                 />
+            <Button
+                android:id="@+id/buttonTarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/color_cafe_botones"
+                android:textColor="@color/white"
+                android:onClick="enviar"
+                android:textSize="18dp"
+                android:text="ENVIAR" />
 
 
         </LinearLayout>

@@ -20,15 +20,15 @@ public class ReservarPedido extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reservarpedido);
-        textViewDescripcionDeTuPedido();
+        DescripcionDeTuPedido();
 
     }
 
 
 
-    public void textViewDescripcionDeTuPedido (){
+    public void DescripcionDeTuPedido (){
         int numero = (int) (Math.random() * 30) + 1;
-        TextView texto = (TextView)findViewById(R.id.textViewDescripcionDeTuPedido);
+        TextView texto = (TextView)findViewById(R.id.DescripcionDeTuPedido);
         String miTexto = ("Su pedido estará en breve, por favor espere en la mesa: " + numero);
         texto.setText(miTexto);
     }

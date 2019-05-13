@@ -114,7 +114,7 @@ public class DetallesBebidas extends AppCompatActivity {
 
         if (validarPedido(nombrePedido)){
 
-            Intent intent3 = new Intent(this, VerPedido.class);
+            Intent intent3 = new Intent(this, DeseaAnadirAlgoMas.class);
             intent3.putExtra(Constants.KEY_NOMBRE_PEDIDO, nombrePedido);
             startActivity(intent3);
          //   startActivityForResult(intent3, Constants.CODIGO_TRANSACCION_PRODUCTO);
@@ -146,10 +146,7 @@ public class DetallesBebidas extends AppCompatActivity {
         return true;
     }
 
-    public void verpedidoPlatos (View view){
-        Intent intent = new Intent(this, VerPedido.class);
-        startActivity(intent);
-    }
+
 
 
 
