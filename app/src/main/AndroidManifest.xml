@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ElementoListaVerPedido"></activity>
         <activity android:name=".VerPedido" />
-        <activity android:name=".DeseaAñadirAlgoMas" />
+        <activity android:name=".DeseaAnadirAlgoMas" />
         <activity android:name=".MandarPedido" />
         <activity android:name=".ReservarPedido" />
         <activity android:name=".VisorImagenSnackYDulces" />
