@@ -107,7 +107,7 @@
             android:layout_height="71dp"
             android:layout_marginTop="20dp"
             android:background="@color/color_cafe_botones"
-            android:onClick="verpedidoBebidas"
+            android:onClick="verpedidoPlatos"
             android:text="Ver mi pedido"
             android:textColor="@color/white"/>
 

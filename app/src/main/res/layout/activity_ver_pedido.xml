@@ -35,8 +35,6 @@
         android:textSize="16dp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toRightOf="parent"
-        app:layout_constraintBottom_toStartOf="parent"
         />
 
 </android.support.constraint.ConstraintLayout>
