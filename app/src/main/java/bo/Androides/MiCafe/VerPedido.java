@@ -57,11 +57,11 @@ public class VerPedido extends AppCompatActivity {
         return total;
     }
 
-    /*public void pedidoRealizado (View view){
-        Intent intent = new Intent(this, Dese);
-        startActivity(intent);*/
+    public void pedidoRealizado (View view){
+        Intent intent = new Intent(this, DeseaAñadirAlgoMas.class);
+        startActivity(intent);
 }
 
 
 
-
+}

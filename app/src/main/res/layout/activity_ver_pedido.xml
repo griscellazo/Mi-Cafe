@@ -33,6 +33,7 @@
         android:padding="20dp"
         android:text="Enviar Pedido"
         android:textSize="16dp"
+        android:onClick="pedidoRealizado"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         />

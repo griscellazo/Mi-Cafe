@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="448dp"
         android:layout_below="@+id/Logo_Cafe"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:orientation="vertical"
         android:padding="20dp">
 

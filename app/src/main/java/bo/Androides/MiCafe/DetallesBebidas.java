@@ -159,6 +159,11 @@ public class DetallesBebidas extends AppCompatActivity {
         return true;
     }
 
+    public void verpedidoPlatos (View view){
+        Intent intent = new Intent(this, VerPedido.class);
+        startActivity(intent);
+    }
+
 
 
 }
