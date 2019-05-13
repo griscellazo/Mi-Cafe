@@ -51,9 +51,9 @@ public class DetalleSnackYDulces extends AppCompatActivity {
         if (b != null) {
 
            nombre.setText(b.getString("TITULO"));
-            detalles.setText(b.getString("DETALLE"));
-            precio.setText(b.getString("PRECIO"));
-            imagen.setImageResource(b.getInt("IMG"));
+           detalles.setText(b.getString("DETALLE"));
+           precio.setText(b.getString("PRECIO"));
+           imagen.setImageResource(R.drawable.club_social);
         }
     }
 

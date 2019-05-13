@@ -20,11 +20,9 @@ public class VerPedido extends AppCompatActivity {
     private Context context;
     private DatabaseHelper dbHelper;
     private List<Pedido> items = new ArrayList<>();
-    private String nombreProducto;
+    //private TextView nombreProducto;
 
     ListView lista;
-
-    List<Producto> verpedido = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +35,7 @@ public class VerPedido extends AppCompatActivity {
 
         lista = (ListView) findViewById(R.id.ListaVerPedido);
 
-
-
         Toast.makeText(this, "FUNCIONA! y el total es:" + total, Toast.LENGTH_SHORT).show();
-
-
-
     }
 
     private double getTotal(){

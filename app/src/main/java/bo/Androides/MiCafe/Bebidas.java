@@ -26,9 +26,7 @@ public class Bebidas extends AppCompatActivity {
 
     List<Producto> productos = new ArrayList<>();
 
-//    private String nombreProducto1 = "HOLA GRIS";
     private TextView nombreProducto;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +48,8 @@ public class Bebidas extends AppCompatActivity {
                 visorDetalles.putExtra("TITULO", producto.getNombre());
                 visorDetalles.putExtra("DETALLE", producto.getDetalle());
                 visorDetalles.putExtra("PRECIO",producto.getPrecio());
-               // visorDetalles.putExtra("IMAGEN",producto.getImagen());
-            //    startActivity(visorDetalles);
+                visorDetalles.putExtra("IMAGEN",producto.getImagen());
+
                 startActivityForResult(visorDetalles, Constants.CODIGO_TRANSACCION_PRODUCTO);
 
             }
@@ -69,9 +67,7 @@ public class Bebidas extends AppCompatActivity {
 
                     Producto producto = new Gson().fromJson(json,Producto.class);
                  //   nombreProducto.setText(producto.getNombre());
-                    /*
-                    User usuarioRecibido = new Gson().fromJson(json, User.class);
-                    nombreProducto.setText(usuarioRecibido.getNombreUsuario());*/
+
                 }
             }
         }
