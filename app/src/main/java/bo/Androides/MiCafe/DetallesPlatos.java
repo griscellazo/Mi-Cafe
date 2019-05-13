@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,14 +42,17 @@ public class DetallesPlatos extends AppCompatActivity {
     TextView titulo = (TextView) findViewById(R.id.titulodescripcionPlatos);
     TextView detalles = (TextView) findViewById(R.id.descripcionPlatos);
     TextView precio = (TextView) findViewById(R.id.precioPlatos);
+    ImageView imagen = (ImageView) findViewById(R.id.imagenPlatos);
 
     Intent intent = getIntent();
     Bundle b = ((Intent) intent).getExtras();
 
         if (b != null) {
-            titulo.setText(b.getString("TIT"));
-            detalles.setText(b.getString("DET"));
-            precio.setText(b.getString("Precio"));
+            titulo.setText(b.getString("TITULO"));
+            detalles.setText(b.getString("DETALLE"));
+            precio.setText(b.getString("PRECIO"));
+            imagen.setImageResource(R.drawable.hamburguesa);
+
 
         }
     }

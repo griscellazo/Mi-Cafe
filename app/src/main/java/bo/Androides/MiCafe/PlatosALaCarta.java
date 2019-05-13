@@ -36,10 +36,11 @@ public class PlatosALaCarta extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent visorDetallesPlatos = new Intent(view.getContext(), DetallesPlatos.class);
                 Producto producto = productos.get(position);
-                visorDetallesPlatos.putExtra("TIT", producto.getNombre());
-                visorDetallesPlatos.putExtra("DET", producto.getDetalle());
-                visorDetallesPlatos.putExtra("DET", producto.getPrecio());
-                // startActivity(visorDetallesPlatos);
+                visorDetallesPlatos.putExtra("TITULO", producto.getNombre());
+                visorDetallesPlatos.putExtra("DETALLE", producto.getDetalle());
+                visorDetallesPlatos.putExtra("PRECIO", producto.getPrecio());
+                visorDetallesPlatos.putExtra("IMAGEN",producto.getImagen());
+
                 startActivityForResult(visorDetallesPlatos, Constants.CODIGO_TRANSACCION_PRODUCTO);
             }
         });

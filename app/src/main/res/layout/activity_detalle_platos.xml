@@ -107,7 +107,7 @@
             android:layout_marginTop="20dp"
             android:textColor="@color/white"
             android:background="@color/color_cafe_botones"
-            android:onClick="verPedidoPlatos"
+            android:onClick="verpedidoPlatos"
             android:text="Ver mi pedido" />
 
     </LinearLayout>

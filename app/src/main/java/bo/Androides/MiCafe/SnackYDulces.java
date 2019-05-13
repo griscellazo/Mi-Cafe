@@ -42,6 +42,7 @@ public class SnackYDulces extends AppCompatActivity {
                 visorDetallesSnack.putExtra("TITULO", producto.getNombre());
                 visorDetallesSnack.putExtra("DETALLE", producto.getDetalle());
                 visorDetallesSnack.putExtra("PRECIO", producto.getPrecio());
+                visorDetallesSnack.putExtra("IMAGEN",producto.getImagen());
 
                 //startActivity(visorDetalles);
                 startActivityForResult(visorDetallesSnack,Constants.CODIGO_TRANSACCION_PRODUCTO);

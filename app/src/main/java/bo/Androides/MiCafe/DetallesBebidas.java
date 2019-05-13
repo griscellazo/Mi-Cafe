@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +31,8 @@ import bo.Androides.MiCafe.model.User;
 
 public class DetallesBebidas extends AppCompatActivity {
 
+    private static final String TAG = "DetallesBebidas";
+
     private Spinner opciones;
 
     private Context mContext;
@@ -40,6 +43,8 @@ public class DetallesBebidas extends AppCompatActivity {
 
     private double precio;
     private int cantidad;
+
+    List<Producto> productos = new ArrayList<>();
 
 
 
@@ -63,7 +68,6 @@ public class DetallesBebidas extends AppCompatActivity {
         TextView precio = (TextView) findViewById(R.id.precioBebidas);
         ImageView imagen = (ImageView) findViewById(R.id.imagenBebidas);
 
-
         Intent intent = getIntent();
         Bundle b = ((Intent) intent).getExtras();
 
@@ -73,9 +77,8 @@ public class DetallesBebidas extends AppCompatActivity {
             nombre.setText(b.getString("TITULO"));
             detalle.setText(b.getString("DETALLE"));
             precio.setText(b.getString("PRECIO"));
-         //   imagen.setImageResource();
+            imagen.setImageResource(R.drawable.jugo_de_manzana);
         }
-        //
     }
 
 
@@ -105,44 +108,28 @@ public class DetallesBebidas extends AppCompatActivity {
         finish();
     }
 
-
-
-
     public void verpedidoBebidas (View view){
-
         String nombrePedido = nombreProducto.getText().toString();
         Log.e("Mis datos", nombrePedido );
 
-
         if (validarPedido(nombrePedido)){
+
             Intent intent3 = new Intent(this, VerPedido.class);
-        //    intent3.putExtra(Constants.KEY_NOMBRE_PEDIDO, nombrePedido);
+            intent3.putExtra(Constants.KEY_NOMBRE_PEDIDO, nombrePedido);
             startActivity(intent3);
          //   startActivityForResult(intent3, Constants.CODIGO_TRANSACCION_PRODUCTO);
+
+            /*
+
+            Intent visorDetalles = new Intent(view.getContext(), VerPedido.class);
+            Producto producto = productos.get(position);
+            visorDetalles.putExtra("TITULO", producto.getNombre());*/
+
         } else {
             Toast.makeText(mContext, "Pedido incorrecto", Toast.LENGTH_SHORT).show();
         }
     }
 
-/*
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == Constants.CODIGO_TRANSACCION) {
-            //Objeto usuario
-            if (resultCode == RESULT_OK) {
-                if (data != null) {
-                    String json = data.getStringExtra(Constants.KEY_REGISTRAR_PEDIDO);
-                    Log.e("Pedido Recibido", json);
-
-                    User usuarioRecibido = new Gson().fromJson(json, User.class);
-                    nombreProducto.setText(usuarioRecibido.getNombreUsuario());
-                    //mPasswordEditText.setText(usuarioRecibido.getPassword());
-                }
-            }
-        }
-    }
-*/
     private void llenarPedido (String nombrePedido){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = prefs.edit();
