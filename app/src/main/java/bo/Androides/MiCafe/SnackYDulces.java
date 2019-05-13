@@ -1,11 +1,15 @@
 package bo.Androides.MiCafe;
 
 import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,26 +30,46 @@ public class SnackYDulces extends AppCompatActivity {
 
 
         lista = (ListView) findViewById(R.id.Lista3);
+        llenarProductosSnack();
 
-        llenarProductos();
         lista.setAdapter(new AdaptadorSnackYDulces(this, productos));
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent visorDetalles = new Intent(view.getContext(), DetalleSnackYDulces.class);
+                Intent visorDetallesSnack = new Intent(view.getContext(), DetalleSnackYDulces.class);
                 Producto producto = productos.get(position);
-                visorDetalles.putExtra("TIT", producto.getNombre());
-                visorDetalles.putExtra("DET", producto.getDetalle());
-                startActivity(visorDetalles);
+                visorDetallesSnack.putExtra("TITULO", producto.getNombre());
+                visorDetallesSnack.putExtra("DETALLE", producto.getDetalle());
+                visorDetallesSnack.putExtra("PRECIO", producto.getPrecio());
+
+                //startActivity(visorDetalles);
+                startActivityForResult(visorDetallesSnack,Constants.CODIGO_TRANSACCION_PRODUCTO);
             }
         });
-
-
-
     }
 
-    private void llenarProductos(){
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == Constants.CODIGO_TRANSACCION_PRODUCTO) {
+            if (resultCode == RESULT_OK) {
+                if (data != null) {
+                    String json = data.getStringExtra(Constants.KEY_REGISTRAR_PEDIDO);
+                    Log.e("Pedido Recibido", json);
+
+                    Producto producto = new Gson().fromJson(json, Producto.class);
+                    //   nombreProducto.setText(producto.getNombre());
+
+                }
+            }
+        }
+    }
+
+
+
+
+    private void llenarProductosSnack(){
         productos.add(new Producto(1,
                 "Club Social",
                 "Deliciosa y crujientes galletas ",
